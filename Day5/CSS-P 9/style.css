@@ -1,0 +1,11 @@
+section{
+    width: 300px;
+    height: 300px;
+    background-size: cover;
+    border-radius: 15px;
+   background-image: url(img1.jpg);
+}
+section:hover{
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+    
+}
