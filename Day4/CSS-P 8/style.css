@@ -1,0 +1,47 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+.one{
+  background: linear-gradient(to right, purple, blue);
+  width: 700px;
+  height: 380px;
+  color: white;
+}
+a{
+    color: white;
+    text-decoration: none;
+}
+h1{
+    text-align: center;
+}
+h2{
+  text-align: center;
+}
+.about{
+  margin-top: 10px;
+ 
+  width: 500px;
+  height:100px;
+  border:solid;
+  border-width: 0.1px;
+  border-color: rgb(252, 252, 250);
+  
+}
+.skill{
+  margin-top: 10px;
+  text-align: center;
+  width: 500px;
+  height:90px;
+  border:solid;
+  border-width: 0.1px;
+}
+.contact{
+  margin-top: 10px;
+  
+  width: 500px;
+  height:70px;
+  border:solid;
+  border-width: 0.1px;
+}
+}
