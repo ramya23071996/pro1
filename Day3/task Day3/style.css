@@ -1,0 +1,42 @@
+.three{
+    font-size: 4rem;
+       
+}
+div{
+    width: 150vw;
+}
+footer{
+    border: solid;
+    height: 20vh;
+}
+.two{
+    font-size: 5vmin;
+}
+.vmax{
+    font-size: 5vmax;
+}
+section{
+    line-height: 2em;
+}
+h3{
+    color: red;
+}
+.section1{
+    width: 20%;
+    height: 20%;
+    border: solid;
+}
+.vw{
+    width: 50vw; 
+    border:solid;
+}
+.banner{
+    width: 50vw;
+    height: 50vh;
+    border: solid;
+}
+.padwidth{
+    width:20%;
+    padding: 30px;
+    border: solid;
+}

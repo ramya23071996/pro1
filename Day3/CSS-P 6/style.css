@@ -1,0 +1,57 @@
+.{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+a{
+    color: white;
+    text-decoration: none;
+}
+.head{
+    text-align: center;
+    width: 600px;
+    height: 80px;
+    background-color: rgb(5, 5, 92);
+    color: white;
+}
+.about{
+    text-align: center;
+    width: 600px;
+    height: 80px;
+    background-color: rgb(184, 179, 179);
+}
+.skill{
+    text-align: center;
+    width: 600px;
+    height: 100px;
+    background: radial-gradient(circle, lightblue, rgb(219, 219, 240));
+    
+}
+p{
+    line-height: 0.75px;
+}
+.portfolio{
+    width: 500px;
+    height: 60px;
+    background-color: white;
+
+}
+.project{
+    text-align: center;
+    width: 600px;
+    height: 200px;
+    background-color: rgb(224, 220, 220);
+}
+.ecommerce{
+    width: 500px;
+    height: 60px;
+    background-color: white;
+}
+.footer{
+    width: 600px;
+    height: 60px;
+    text-align: center;
+    background-color: rgb(5, 5, 92);
+    color: white;
+}
