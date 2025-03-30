@@ -1,0 +1,32 @@
+p{
+    color: rgba(75%, 35%, 85%,0.5);
+}
+button{
+    background-color: hsla(200, 100%, 50%, 0.7);
+}
+header {
+    background: linear-gradient(to right, rgb(97, 88, 88), orange);
+    }
+    footer {
+        background: radial-gradient(circle, lightblue, darkblue);
+        font-size: x-large;
+    }
+    aside{
+        background: conic-gradient(from 0deg, red, yellow, green, blue);
+        
+    }
+    .two{
+        background-color: hsl(200, 100%, 50%);
+        
+    }
+    h2{
+       color: #9be47e;
+    }
+    .div2{
+        
+        height: 100px;
+        width: 200px;
+        background: radial-gradient(circle,lightblue, darkblue);
+    
+    }
+    
