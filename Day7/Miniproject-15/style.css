@@ -1,0 +1,29 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.head{
+    height: 50px;
+    background:linear-gradient(to right, red, orange,yellow );
+    border: solid;
+    text-align: center;
+    padding-bottom: 25px;
+}
+img{
+    height: 300px;
+    width: 300px;
+}
+.row{
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: center;
+}
+.container{
+    margin: 10px;
+}
+img:hover{
+    box-shadow: 15px 15px 25px rgba(0, 0, 0, 0.5); 
+}
