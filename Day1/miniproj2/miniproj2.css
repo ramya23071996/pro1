@@ -1,0 +1,25 @@
+ th {
+    color: white;
+    background:rgb(87, 79, 79);
+  }
+  td:first-child
+  {
+    color:red;
+    
+  }
+  table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  tr:nth-child(even)
+  {background-color:white
+  }
+
+h1{
+    background-color: white;
+}
+div{
+  width: 600px;
+  height: 300px;
+  background-color: rgb(201, 247, 231);
+}
