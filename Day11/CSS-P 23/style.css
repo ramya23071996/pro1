@@ -1,0 +1,36 @@
+*{ 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box;
+} 
+.head{ 
+    background: #cf126a; 
+    color: white; 
+    text-align: center; 
+    padding: 10px 20px; 
+} 
+nav { 
+    position: sticky; 
+    top: 0; 
+    background: #333; 
+    color: white; 
+    padding: 10px 20px; 
+    /* z-index: 10;  */
+} 
+nav a { 
+    color: white; 
+    text-decoration: none; 
+    margin-right: 20px; 
+    font-weight: bold; 
+} 
+section { 
+    padding: 20px; 
+    height: 800px; 
+} 
+section:nth-child(even) { 
+    background: #f4f4f4d7; 
+} 
+
+section:nth-child(odd) { 
+    background: #ddd; 
+} 
