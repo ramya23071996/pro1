@@ -1,0 +1,92 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-image: url(img3.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+}
+.container{
+    width: 900px;
+    height: 900px;
+    margin: auto;
+    /* border: 1px solid black; */
+}
+.box{
+    margin: 50px;
+    width: 800PX;
+    height: 600PX;
+    /* border: 1px solid black; */
+    background-image: url(img1.png);
+    padding-top: 90px;
+    padding-left: 20px;
+    position: relative;
+    
+}
+.box h1{
+    color: white;
+}
+.box p{
+    color: rgb(170, 152, 152);
+}
+.button1{
+    background-color: rgb(133, 117, 117);
+    color: white;
+    height: 40px;
+    margin-left: 20px;
+    border-radius: 10px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+.button1:hover{
+    background-color: rgb(8, 8, 231);
+    transform: scale(1.2);
+}
+.button2{
+    background-color: rgb(133, 117, 117);
+    color: white;
+    height: 40px;
+    margin-left: 20px;
+    border-radius: 10px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+.button2:hover{
+    background-color: rgb(224, 46, 46);
+    transform: scale(1.2);
+}
+.image{
+    /* border: 1px solid black; */
+    height: 80px;
+    width: 80px;
+    border-radius: 100px;
+    
+}
+.box .image{
+    color: rgb(24, 18, 18);
+    padding-top: 20px;
+    padding-left: 15px;
+    position: absolute;
+    top: 30px;
+    left: 650px;
+    animation: spin 4s linear infinite; 
+
+}
+@keyframes spin { 
+    from { transform: rotate(0deg); } 
+    to { transform: rotate(360deg); } 
+}
+.image1{
+    display: inline-block;
+    opacity: 0.1;
+    animation: bounce 1s infinite alternate; 
+}
+.image1:hover{
+    opacity: 1;
+}
+@keyframes bounce { 
+    from { transform: translateY(0); } 
+    to { transform: translateY(-30px); } 
+} 
