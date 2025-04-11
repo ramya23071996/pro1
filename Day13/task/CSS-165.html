@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Footer</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .box{
+            width: 700px;
+            height: 500px;
+            border: 1px solid black;
+            display: grid;
+            grid-template-rows: 2fr 0.5fr;
+        }
+        .body{
+            border: 1px solid black;
+        }
+        .footer{
+            border: 1px solid black;
+        }
+        p{
+            display: inline-block;
+        }
+        a{
+            display: inline-block;
+            align-items: end;
+        }
+        @media(max-width:599px){
+            p,a{
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+          <div class="body"></div>
+          <div class="footer">
+            <p>© 2025 VTS.All rights reserved</p>
+            <a href="#">Go to Home</a>
+            <a href="#">Contact Us</a>
+            <a href="#">About Us</a>
+          </div>
+    </div>
+</body>
+</html>

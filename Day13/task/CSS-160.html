@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Image Resizing </title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .box img{
+            height: 100vh;
+        }
+        @media(max-width:599px){
+           .box img{
+            width: 100%;
+           }
+        }
+        @media(min-width:600px){
+           .box img{
+            width: 50%;
+           }
+        }
+        @media(min-width:900px){
+            .box img{
+            width: 25%;
+           }
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <img src="img1.jpeg" alt="Rabbit">
+    </div>
+</body>
+</html>

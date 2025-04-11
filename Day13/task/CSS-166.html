@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hover Effects for Desktop Only</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .button {
+            border-radius: 5px;
+            padding: 10px 20px;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+
+        @media(min-width:600px) {
+            img:hover {
+                box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+            }
+
+            button:hover {
+                background-color: #2ecc71;
+                transform: scale(1.1);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <img src="img1.jpeg" alt="Rabbit" width="200px" height="200px"><br><br>
+        <button>Click Me</button>
+    </div>
+</body>
+
+</html>

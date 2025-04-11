@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show/Hide Elements</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            width: 500px;
+            height: 100vh;
+            border: 1px solid black;
+        }
+        h1{
+            background-color: black;
+            color: white;
+            text-align: center;
+        }
+        .side{
+            width: 150px;
+            height: 200px;
+            /* border: 1px solid black; */
+        }
+        @media(max-width:599px){
+            .side li{
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Heading</h1>
+        <div class="side">
+            <h2>Side Bar</h2>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About us</a></li>
+            <li><a href="#">Contact Us</a></li>
+        </div>
+       
+            
+            
+            
+      
+    </div>
+</body>
+</html>

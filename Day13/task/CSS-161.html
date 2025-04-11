@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout Adjustments </title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .box{
+            width: 600px;
+            height: 100vh;
+            display: flex;
+            flex-wrap: wrap;
+            flex-basis: 45%;
+            justify-content: space-evenly;
+            justify-content: space-between;
+            align-items: center;
+            
+        }
+        .box1{
+            width: 26%;
+            height: 200px;
+            border: 1px solid black;
+            background-color: rgb(238, 148, 30);
+        }
+        
+        .box2{
+            width: 26%;
+            height: 200px;
+            border: 1px solid black;
+            background-color: aqua;
+            
+        }
+        .box3{
+            width: 26%;
+            height: 200px;
+            border: 1px solid black;
+            background-color: rgba(240, 58, 149, 0.623);
+        }
+        .box4{
+            width: 26%;
+            height: 200px;
+            border: 1px solid black;
+            background-color: rgb(74, 226, 74);
+        }
+        .box5{
+            width: 26%;
+            height: 200px;
+            border: 1px solid black;
+            background-color: rgb(180, 15, 172);
+        }
+        .box6{
+            width: 26%;
+            height: 200px;
+            border: 1px solid black;
+            background-color: rgba(211, 85, 35, 0.205);
+        }
+        @media(max-width:900px){
+            .box1, .box2, .box3, .box4, .box5, .box6{
+            width: 50%;
+        }
+        }
+       @media(max-width:599px){
+        .box1, .box2, .box3, .box4, .box5, .box6{
+            width: 100%;
+        }
+        .box{
+            width: 100%;
+        }
+       }
+
+
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box3"></div>
+        <div class="box4"></div>
+        <div class="box5"></div>
+        <div class="box6"></div>
+    </div>
+</body>
+</html>

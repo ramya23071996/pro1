@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Query for Print</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body{
+            
+            background-image: url(img1.jpeg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+.box{
+    margin: auto;
+    margin-top: 30px;
+    width: 400px;
+    height: 350px;
+    border: 1px solid black;
+}
+        @media print {
+           
+
+            .print-only {
+                background-color: white;
+                color: black;
+            }
+            .no-print {
+                body{
+            
+            background-image: url(img1.jpeg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+       <br> <h2>Paragraph1</h2>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto eum vitae alias! Sequi libero ex cumque sapiente magnam reprehenderit cum inventore, dicta ducimus velit enim corrupti maxime? Fuga, laudantium dolore.</p>
+  <br><br><br> <h2>Paragraph2</h2>
+   <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam cupiditate, vitae tempore, a commodi aliquid excepturi pariatur optio nobis voluptates quo voluptatum cum, officia voluptate tenetur veniam. Ipsa, numquam temporibus!</p>
+   
+    </div>
+
+</body>
+
+</html>

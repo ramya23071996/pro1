@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Font Sizes  </title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .box{
+            
+            height: 600px;
+            background-color: white;
+        }
+        @media(max-width:599px){
+            .box h1{
+                font-size: 20px;
+            }
+            .box p{
+                font-size: 14px;
+            }
+        }
+        @media(min-width:600px){
+            .box h1{
+                font-size: 30px;
+            }
+            .box p{
+                font-size: 18px;
+            }
+        }
+        @media(min-width:900px){
+            .box h1{
+                font-size: 40px;
+            }
+            .box p{
+                font-size: 22px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h1>Responsive Font Sizes </h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, sequi ipsa in harum voluptas illum est aliquam dignissimos dolorum odit ipsum porro eligendi iste magnam assumenda, ab minus ea itaque?</p>
+    </div>
+</body>
+</html>

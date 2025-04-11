@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Forms </title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: rgb(89, 173, 145);
+        }
+        .box{
+            width: 700px;
+            height: 300px;
+            border: 1px solid black;
+        }
+        @media(max-width:599px){
+            form,label{
+                display: block;
+            }
+        }
+    </style>
+
+</head>
+<body>
+    <div class="box">
+        <h1>Enter your Details</h1><br>
+        <form>
+            <label for="name1">Enter a 1st Name</label>
+            <input type="text" id="name1">
+            <label for="name2">Enter a Last Name</label>
+            <input type="text" id="name2"><br>
+            <label for="email">Email</label>
+            <input type="email" id="email">
+            <label for="num">Enter a Ph Num</label>
+            <input type="number" id="num"><br><br>
+            <button>Submit</button>
+            </form>
+            
+        
+
+    </div>
+</body>
+</html>

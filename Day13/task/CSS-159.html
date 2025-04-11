@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Navigation Bar</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        nav{
+            background-color: black;
+            color: white;
+            height: 50px;
+            text-align: center;
+            
+        }
+        a{
+        
+            padding-left:40px ;
+        }
+@media(max-width:600px){
+    nav a{
+    
+display: block;
+    }
+}
+    </style>
+</head>
+<body>
+    <div class="box">
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">About Us</a>
+            <a href="#">Contact Us</a>
+        </nav>
+    </div>
+</body>
+</html>
