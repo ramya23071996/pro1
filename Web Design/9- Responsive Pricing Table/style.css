@@ -1,0 +1,140 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    width: 90%;
+    height: 800px;
+    border: 1px solid black;
+    margin: auto;
+    background-color: rgb(247, 244, 244);
+}
+.heading{
+    width: 100%;
+    height: 70px;
+    text-align: center;
+    padding-top: 10px;
+
+}
+.row1{
+    width: 96%;
+    height: 600px;
+    /* border: 1px solid black; */
+   margin: 10px;
+    display: flex;
+    background-color: rgb(247, 244, 244);
+    
+}
+.col1{
+    flex-grow: 1.5;
+    background-color: white;
+     /* border: 1px solid black;  */
+    align-content: space-around;
+    margin-right: 20px;
+    border-radius: 15px;
+    
+    
+}
+.col2{
+    flex-grow: 1;
+    background-color: white;
+    /* border: 1px solid black;  */
+    align-content: space-around;
+    margin-right: 20px;
+    border-radius: 15px;
+    
+}
+.col3{
+    flex-grow: 1;
+    background-color: white; 
+    align-content: space-around;
+     /* border: 1px solid black;  */
+     border-radius: 10px;
+     
+     
+}
+
+.col1-child1{
+    
+    width: 100%;
+    height: 50%;
+     /* border: 1px solid black;  */
+     border-radius: 15px;
+     
+    
+}
+.col1-child2{
+    width: 100%;
+    height: 50%;
+    /* border: 1px solid black;  */
+    text-align: center;
+    
+    
+}
+.col2-child1{
+    
+    width: 100%;
+    height: 50%;
+     /* border: 1px solid black;  */
+     border-radius: 10px;
+    
+}
+.col2-child2{
+    width: 100%;
+    height: 50%;
+     /* border: 1px solid black;  */
+    text-align: center;
+    border-radius: 10px;
+}
+.col3-child1{
+    
+    width: 100%;
+    height: 50%;
+     /* border: 1px solid black;  */
+     border-radius: 10px;
+    
+}
+.col3-child2{
+    width: 100%;
+    height: 50%;
+     /* border: 1px solid black;  */
+    text-align: center;
+    border-radius: 10px;
+    
+}
+img{
+    height: 100%;
+    width: 100%;
+}
+h2{
+    color: red;
+}
+table{
+    /* border: 1px solid black; */
+   }
+button{
+    font-size: large;
+    margin: 20px;
+   
+}
+button:hover { 
+    background-color: #af187d; 
+    transform: scale(1.3);
+}
+.offer{
+    font-size: 1.5rem; 
+    background-color: #25ad97;
+    font-weight: bold; 
+    animation: bounce 1s infinite alternate; 
+}
+@keyframes bounce { 
+    from { transform: translateY(0); } 
+    to { transform: translateY(-5px); } 
+} 
+@media(min-width=599px){
+   
+    .col1{
+        width: 100%;
+    }
+}
