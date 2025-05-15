@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <form action="">
+        <label for="name">Enter Name</label>
+        <input type="text" id="name" placeholder="Enter name"><br>
+        <button type="submit">Submit</button>
+    </form>
+    <script>
+        document.addEventListener("DOMContentLoaded",function(){
+            document.getElementById("name").value=sessionStorage.getItem("name") || "";
+
+            document.getElementById("name").addEventListener("input", function () {
+                sessionStorage.setItem("name", this.value);
+                  });
+            
+            
+               })
+    </script>
+</body>
+</html>
