@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task-js133</title>
+    <style>
+        .dark-mode {
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <button id="toggleTheme">Light/Dark Mode</button>
+    <script>
+        function loadTheme() {
+            let theme = localStorage.getItem("theme");
+            if (theme === "dark") {
+                document.body.classList.add("dark-mode");
+            }
+        }
+        function toggleTheme() {
+            document.body.classList.toggle("dark-mode");
+            let theme = document.body.classList.contains("dark-mode") ? "dark" : "light";
+            localStorage.setItem("theme", theme);
+        }
+        document.getElementById("toggleTheme").addEventListener("click",
+            toggleTheme);
+        loadTheme(); 
+    </script>
+</body>
+
+</html>

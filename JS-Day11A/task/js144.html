@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz System</title>
+</head>
+<body>
+    <h1>Simple Quiz</h1>
+
+    <form id="quizForm">
+        <p>1. What is the capital of France?</p>
+        <input type="radio" name="q1" value="Paris"> Paris<br>
+        <input type="radio" name="q1" value="London"> London<br>
+        <input type="radio" name="q1" value="Berlin"> Berlin<br>
+
+       
+
+        <button type="button" onclick="saveAnswers()">Save Answers</button>
+        <button type="button" onclick="loadAnswers()">Load Answers</button>
+        <button type="button" onclick="clearAnswers()">Clear Answers</button>
+    </form>
+
+    <script>
+        function saveAnswers() {
+            const answers = {};
+            document.querySelectorAll("input[type=radio]:checked").forEach(input => {
+                answers[input.name] = input.value;
+            });
+            sessionStorage.setItem("quizAnswers", JSON.stringify(answers));
+            alert("Answers saved!");
+        }
+
+        function loadAnswers() {
+            const storedAnswers = JSON.parse(sessionStorage.getItem("quizAnswers"));
+            if (storedAnswers) {
+                for (const question in storedAnswers) {
+                    document.querySelector(`input[name=${question}][value="${storedAnswers[question]}"]`).checked = true;
+                }
+                alert("Answers loaded!");
+            } else {
+                alert("No saved answers found.");
+            }
+        }
+
+        function clearAnswers() {
+            sessionStorage.removeItem("quizAnswers");
+            document.querySelectorAll("input[type=radio]").forEach(input => input.checked = false);
+            alert("Answers cleared!");
+        }
+    </script>
+</body>
+</html>
