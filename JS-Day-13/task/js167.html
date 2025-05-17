@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Manage JSON Data</title>
+</head>
+<body>
+    <button onclick="addNewItem()">Add New Object</button>
+    <script>
+        function addNewItem() {
+            
+            let jsonData = JSON.parse(localStorage.getItem("items")) || [];
+
+            
+            const newItem = { id: jsonData.length + 1, name: "New Item", age: Math.floor(Math.random() * 50) };
+
+            
+            jsonData.push(newItem);
+
+            
+            localStorage.setItem("items", JSON.stringify(jsonData));
+
+            console.log("Updated JSON:", jsonData);
+        }
+    </script>
+</body>
+</html>

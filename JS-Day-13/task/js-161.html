@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LocalStorage Example</title>
+</head>
+<body>
+    <h1>Store and Retrieve Data</h1>
+
+    <button id="save" >Save Data</button>
+    <button id="load">Load Data</button>
+
+    <h2>Retrieved Data:</h2>
+    <div id="output"></div>
+
+    <script>
+        
+        const people = [
+            { id: 1, name: "Alice", age: 25 },
+            { id: 2, name: "Bob", age: 30 },
+            { id: 3, name: "Charlie", age: 35 }
+        ];
+
+        document.getElementById("save").addEventListener("click", function(){
+            localStorage.setItem("people", JSON.stringify(people));
+            alert("Data stored successfully!");
+        }
+)
+        document.getElementById("load").addEventListener("click", function () {
+            const storedData = localStorage.getItem("people");
+            const parsedData = storedData ? JSON.parse(storedData) : [];
+
+            document.getElementById("output").textContent = JSON.stringify(parsedData, null, 2);
+        })
+        
+       
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sort</title>
+</head>
+<body>
+    <script>
+        const items = [
+    { name: "Item A", price: 30 },
+    { name: "Item B", price: 10},
+    { name: "Item C", price: 20 }
+];
+
+
+items.sort((a, b) => a.price - b.price);
+
+console.log("Sorted by price:", items);
+
+
+items.sort((a, b) => b.age - a.age);
+
+console.log("Sorted by age:", items);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>E-Commerce Product Catalog</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        .product { border: 1px solid #ccc; padding: 10px; margin: 5px; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <h1>Product Catalog</h1>
+    
+    <label for="filter">Filter by price (below $500):</label>
+    <input type="checkbox" id="filter" onchange="loadProducts()">
+
+    <label for="sort">Sort by price (low to high):</label>
+    <input type="checkbox" id="sort" onchange="loadProducts()">
+
+    <div id="products"></div>
+
+    <script>
+        async function loadProducts() {
+            try {
+                const response = await fetch('data.json');
+                let products = await response.json();
+
+                // Apply price filter
+                if (document.getElementById("filter").checked) {
+                    products = products.filter(product => product.price < 500);
+                }
+
+                // Apply sorting
+                if (document.getElementById("sort").checked) {
+                    products.sort((a, b) => a.price - b.price);
+                }
+
+                // Display products
+                const productContainer = document.getElementById("products");
+                productContainer.innerHTML = "";
+                products.forEach(product => {
+                    const div = document.createElement("div");
+                    div.className = "product";
+                    div.innerHTML = `<strong>${product.name}</strong> - $${product.price} - ${product.category}`;
+                    div.onclick = () => alert(`Product Details:\nName: ${product.name}\nPrice: $${product.price}\nCategory: ${product.category}`);
+                    productContainer.appendChild(div);
+                });
+                
+            } catch (error) {
+                console.error("Error fetching products:", error);
+            }
+        }
+
+        window.onload = loadProducts;
+    </script>
+</body>
+</html>

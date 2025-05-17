@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Remove Object from JSON</title>
+</head>
+<body>
+    <button onclick="removeItem(2)">Remove Item with ID 2</button>
+    <script>
+        function removeItem(id) {
+            
+            let jsonData = JSON.parse(localStorage.getItem("items")) || [];
+
+            
+            jsonData = jsonData.filter(item => item.id !== id);
+
+        
+            localStorage.setItem("items", JSON.stringify(jsonData));
+
+            console.log("Updated JSON:", jsonData);
+        }
+    </script>
+</body>
+</html>

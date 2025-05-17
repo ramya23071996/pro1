@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modify JSON Object in Array</title>
+</head>
+<body>
+    <h1>Update Product Details</h1>
+    
+    <input type="number" id="product-id" placeholder="Enter Product ID">
+    <input type="text" id="new-name" placeholder="New Name">
+    <input type="number" id="new-price" placeholder="New Price">
+    <button onclick="updateProduct()">Update Product</button>
+
+    <h2>Updated Product List</h2>
+    <div id="output"></div>
+
+    <script>
+        // Example array of JSON objects
+        let products = [
+            { id: 1, name: "Laptop", price: 500 },
+            { id: 2, name: "Phone", price: 300 },
+            { id: 3, name: "Tablet", price: 200 }
+        ];
+
+        // Function to update an object in the array
+        function updateProduct() {
+            const id = Number(document.getElementById("product-id").value);
+            const newName = document.getElementById("new-name").value;
+            const newPrice = Number(document.getElementById("new-price").value);
+
+            const product = products.find(p => p.id === id);
+            if (product) {
+                product.name = newName || product.name; // Keep old name if empty
+                product.price = newPrice || product.price; // Keep old price if empty
+                
+                alert(`Updated ${product.name} with new price: $${product.price}`);
+                displayProducts();
+            } else {
+                alert("Product ID not found.");
+            }
+        }
+
+        // Function to display products
+        function displayProducts() {
+            document.getElementById("output").textContent = JSON.stringify(products, null, 2);
+        }
+
+        // Initial display
+        displayProducts();
+    </script>
+</body>
+</html>
