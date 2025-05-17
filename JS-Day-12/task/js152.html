@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Count Matching Objects</title>
+</head>
+<body>
+    <h1>Matching Count</h1>
+    <div id="output"></div>
+
+    <script>
+    
+        const people = [
+            { id: 1, name: "Alice", age: 25 },
+            { id: 2, name: "Bob", age: 30 },
+            { id: 3, name: "Charlie", age: 35 },
+            { id: 4, name: "David", age: 30 }
+        ];
+
+        
+        const count = people.filter(person => person.age === 30).length;
+
+        
+        document.getElementById("output").textContent = `People aged 30: ${count}`;
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Highest-Priced Product</title>
+</head>
+<body>
+    <h1>Most Expensive Product</h1>
+    <div id="output"></div>
+
+    <script>
+        
+        const products = [
+            { id: 1, name: "Laptop", price: 500 },
+            { id: 2, name: "Phone", price: 300 },
+            { id: 3, name: "Tablet", price: 200 },
+            { id: 4, name: "Headphones", price: 50 }
+        ];
+
+        
+        const highestProduct = products.reduce((max, product) => 
+            product.price > max.price ? product : max, products[0]);
+
+        
+        document.getElementById("output").innerHTML = 
+            `<h2>${highestProduct.name}</h2><p>Price: $${highestProduct.price}</p>`;
+    </script>
+</body>
+</html>

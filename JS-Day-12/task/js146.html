@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       fetch("https://jsonplaceholder.typicode.com/posts") // Fetch data from API 
+.then(response => response.json()) // Convert response to JSON 
+.then(data => console.log(data)) // Use the data 
+.catch(error => console.error("Error:", error)); // Handle errors
+    </script>
+</body>
+</html>

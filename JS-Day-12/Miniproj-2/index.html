@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Book Management System</title>
+</head>
+<body>
+    <h1>Library Management</h1>
+
+    <!-- Search Book -->
+    <input type="text" id="search" placeholder="Search by Title, Author, or Genre">
+    <button onclick="searchBooks()">Search</button>
+
+    <!-- Borrow or Return Book -->
+    <input type="number" id="book-id" placeholder="Book ID">
+    <button onclick="borrowBook()">Borrow</button>
+    <button onclick="returnBook()">Return</button>
+
+    <!-- Display Available Books -->
+    <h2>Available Books</h2>
+    <div id="available-books"></div>
+
+    <script>
+        // Library Book Records
+        let books = [
+            { id: 1, title: "The Hobbit", author: "J.R.R. Tolkien", genre: "Fantasy", available: true, borrower: null },
+            { id: 2, title: "1984", author: "George Orwell", genre: "Dystopian", available: false, borrower: "Alice" },
+            { id: 3, title: "To Kill a Mockingbird", author: "Harper Lee", genre: "Classic", available: true, borrower: null },
+            { id: 4, title: "Moby Dick", author: "Herman Melville", genre: "Adventure", available: false, borrower: "Bob" }
+        ];
+
+        // Display Available Books
+        function displayAvailableBooks() {
+            const container = document.getElementById("available-books");
+            container.innerHTML = books
+                .filter(book => book.available)
+                .map(book => `<p>${book.title} by ${book.author} (${book.genre})</p>`)
+                .join("");
+        }
+
+        // Search Books
+        function searchBooks() {
+            const searchTerm = document.getElementById("search").value.toLowerCase();
+            const results = books.filter(book =>
+                book.title.toLowerCase().includes(searchTerm) ||
+                book.author.toLowerCase().includes(searchTerm) ||
+                book.genre.toLowerCase().includes(searchTerm)
+            );
+
+            alert(results.length ? results.map(book => `${book.title} by ${book.author}`).join("\n") : "No books found.");
+        }
+
+        // Borrow Book
+        function borrowBook() {
+            const id = Number(document.getElementById("book-id").value);
+            const book = books.find(b => b.id === id);
+            if (book && book.available) {
+                book.available = false;
+                book.borrower = prompt("Enter borrower name:");
+                alert(`You borrowed "${book.title}"`);
+                displayAvailableBooks();
+            } else {
+                alert("Book is not available or invalid ID.");
+            }
+        }
+
+        // Return Book
+        function returnBook() {
+            const id = Number(document.getElementById("book-id").value);
+            const book = books.find(b => b.id === id);
+            if (book && !book.available) {
+                book.available = true;
+                book.borrower = null;
+                alert(`You returned "${book.title}"`);
+                displayAvailableBooks();
+            } else {
+                alert("Invalid ID or book is not borrowed.");
+            }
+        }
+
+        // Initial Display
+        displayAvailableBooks();
+    </script>
+</body>
+</html>

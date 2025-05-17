@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modify Object in Array</title>
+</head>
+<body>
+   
+
+    <script>
+        
+        let people = [
+            { id: 1, name: "Alice", age: 25 },
+            { id: 2, name: "Bob", age: 30 },
+            { id: 3, name: "Charlie", age: 35 }
+        ];
+
+        
+        function updatePerson(id, newName, newAge) {
+            people = people.map(person => 
+                person.id === id ? { ...person, name: newName, age: newAge } : person
+            );
+        }
+
+        
+        updatePerson(2, "Robert", 32);
+
+        let people1 = JSON.stringify(people, null, 2);
+        console.log(people1);
+        
+    </script>
+</body>
+</html>

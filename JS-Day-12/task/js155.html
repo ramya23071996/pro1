@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remove Object from Array</title>
+</head>
+<body>
+    <h1>Updated List</h1>
+    <div id="output"></div>
+    <button onclick="removeItem(2)">Remove Bob</button>
+
+    <script>
+    
+        let people = [
+            { id: 1, name: "Alice", age: 25 },
+            { id: 2, name: "Bob", age: 30 },
+            { id: 3, name: "Charlie", age: 35 }
+        ];
+
+        
+        function removeItem(id) {
+            people = people.filter(person => person.id !== id);
+            displayPeople();
+        }
+
+        
+        function displayPeople() {
+            document.getElementById("output").textContent = JSON.stringify(people, null, 2);
+        }
+
+        
+        displayPeople();
+    </script>
+</body>
+</html>

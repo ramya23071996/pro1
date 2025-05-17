@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventory Management System</title>
+</head>
+<body>
+    <h1>Inventory Management</h1>
+
+    <!-- Search Product -->
+    <input type="text" id="search" placeholder="Search by ID or Name">
+    <button onclick="checkStock()">Check Stock</button>
+
+    <!-- Update Inventory -->
+    <input type="text" id="update-id" placeholder="Product ID">
+    <input type="number" id="update-qty" placeholder="Quantity">
+    <button onclick="updateStock()">Update Stock</button>
+
+    <!-- Display Inventory -->
+    <h2>Inventory List</h2>
+    <div id="inventory"></div>
+
+    <!-- Total Inventory Value -->
+    <h2>Total Inventory Value: $<span id="total-value">0</span></h2>
+
+    <script>
+        // Product Inventory Array
+        let inventory = [
+            { id: 1, name: "Laptop", category: "Electronics", quantity: 10, price: 500 },
+            { id: 2, name: "Phone", category: "Electronics", quantity: 20, price: 300 },
+            { id: 3, name: "Tablet", category: "Electronics", quantity: 15, price: 200 },
+            { id: 4, name: "T-shirt", category: "Clothing", quantity: 50, price: 20 }
+        ];
+
+        // Display Inventory
+        function displayInventory() {
+            const inventoryDiv = document.getElementById("inventory");
+            inventoryDiv.innerHTML = inventory.map(product => 
+                `<p>${product.name} - ${product.quantity} in stock ($${product.price} each)</p>`
+            ).join("");
+
+            // Calculate and display total inventory value
+            const totalValue = inventory.reduce((sum, product) => sum + (product.price * product.quantity), 0);
+            document.getElementById("total-value").textContent = totalValue;
+        }
+
+        // Check Stock Availability
+        function checkStock() {
+            const searchTerm = document.getElementById("search").value.toLowerCase();
+            const product = inventory.find(item => item.id == searchTerm || item.name.toLowerCase() === searchTerm);
+            alert(product ? `${product.name} has ${product.quantity} in stock.` : "Product not found.");
+        }
+
+        // Update Inventory (Add/Remove Stock)
+        function updateStock() {
+            const id = Number(document.getElementById("update-id").value);
+            const qtyChange = Number(document.getElementById("update-qty").value);
+
+            const product = inventory.find(item => item.id === id);
+            if (product) {
+                product.quantity += qtyChange;
+                alert(`Updated ${product.name} stock to ${product.quantity}`);
+                displayInventory();
+            } else {
+                alert("Product ID not found.");
+            }
+        }
+
+        // Initial Display
+        displayInventory();
+    </script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Group Products by Category</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        .category { margin: 20px 0; padding: 10px; border-bottom: 2px solid #444; }
+    </style>
+</head>
+<body>
+    <h1>Grouped Products</h1>
+    <div id="product-container"></div>
+
+    <script>
+        
+        const products = [
+            { id: 1, name: "Laptop", price: 500, category: "Electronics" },
+            { id: 2, name: "Phone", price: 300, category: "Electronics" },
+            { id: 3, name: "Tablet", price: 200, category: "Electronics" },
+            { id: 4, name: "T-shirt", price: 20, category: "Clothing" },
+            { id: 5, name: "Jeans", price: 40, category: "Clothing" }
+        ];
+
+    
+        const groupedProducts = products.reduce((acc, product) => {
+            acc[product.category] = acc[product.category] || [];
+            acc[product.category].push(product);
+            return acc;
+        }, {});
+
+        
+        const container = document.getElementById('product-container');
+
+        Object.entries(groupedProducts).forEach(([category, items]) => {
+            const categoryDiv = document.createElement('div');
+            categoryDiv.classList.add('category');
+            categoryDiv.innerHTML = `<h2>${category}</h2>`;
+            
+            items.forEach(product => {
+                const productDiv = document.createElement('div');
+                productDiv.innerHTML = `<p>${product.name} - $${product.price}</p>`;
+                categoryDiv.appendChild(productDiv);
+            });
+
+            container.appendChild(categoryDiv);
+        });
+
+    </script>
+</body>
+</html>
