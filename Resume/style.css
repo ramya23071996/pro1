@@ -1,0 +1,98 @@
+body {
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    font-variation-settings:"wdth" 100;
+    /* font-size: 20px; */
+    text-align: center;
+    background-color: #bbb0b0;
+}
+
+header {
+    background: navy;
+    color: white;
+    padding: 20px;
+}
+
+section {
+    margin: 20px;
+    padding: 10px;
+    /* background: rgb(196, 126, 147); */
+    border-radius: 5px;
+}
+
+.project li {
+    list-style: none;
+    font-size: 20px;
+}
+
+.nav_con ul{
+    margin-left: 300px;
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+}
+.nav_con>li,a{
+    list-style: none;
+    text-decoration: none;
+    color: black;
+}
+.nav_con a:hover{
+    background-color: white;
+    border-radius: 10px;
+}
+
+
+.contact-container {
+    width: 50%;
+    margin: auto;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.contact-details p {
+    font-size: 20px;
+}
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+button {
+    background: navy;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+button:hover {
+    background: darkblue;
+}
+
+.profile_cont{
+    display: flex;
+    justify-content: space-around;
+    /* padding-top: 30px; */
+    padding-left: 10%;
+}
+.education{
+    width: 40%;
+    padding-top: 50px;
+    background:linear-gradient(rgb(204, 124, 204),rgb(126, 193, 202)) ;
+}
+.personal_info{
+    width: 40%;
+     background:linear-gradient(green,yellow) ;
+    
+}
+.profile_cont img{
+    width: 60%;
+}
+.profile_cont>a{
+    text-decoration: none;
+    color: black;
+}
