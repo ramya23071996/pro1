@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Error Logging System</title>
+</head>
+<body>
+    <script>
+        function logError(errorMessage) {
+            let errors = JSON.parse(localStorage.getItem("errorLogs")) || [];
+
+            errors.push({
+                message: errorMessage,
+                timestamp: new Date().toISOString()
+            });
+
+            localStorage.setItem("errorLogs", JSON.stringify(errors));
+        }
+
+        function simulateError() {
+            try {
+                
+                throw new Error("Something went wrong!");
+            } catch (error) {
+                console.error("Error captured:", error.message);
+                logError(error.message);
+            }
+        }
+
+        function displayErrors() {
+            let errors = JSON.parse(localStorage.getItem("errorLogs")) || [];
+            console.log("Stored Errors:", errors);
+        }
+
+        
+        simulateError();
+
+        
+        displayErrors();
+    </script>
+</body>
+</html>

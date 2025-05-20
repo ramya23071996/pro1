@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Prevent Infinite Recursion</title>
+</head>
+<body>
+    <script>
+        function recursiveFunction(count) {
+            if (count >= 5) {
+                console.warn("Maximum recursion limit reached. Stopping recursion.");
+                return;
+            }
+
+            console.log("Recursion count:", count);
+            recursiveFunction(count + 1);
+        }
+
+        recursiveFunction(0); // Start recursion with an initial count
+    </script>
+</body>
+</html>

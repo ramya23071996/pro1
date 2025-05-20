@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>User Registration</title>
+    <style>
+        .error { color: red; font-size: 14px; }
+    </style>
+</head>
+<body>
+    <h2>User Registration Form</h2>
+    <form id="registrationForm">
+        <label>Name: <input type="text" id="name"></label>
+        <span class="error" id="nameError"></span><br><br>
+
+        <label>Email: <input type="email" id="email"></label>
+        <span class="error" id="emailError"></span><br><br>
+
+        <button type="submit">Register</button>
+    </form>
+
+    <script>
+        document.getElementById("registrationForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            let name = document.getElementById("name").value.trim();
+            let email = document.getElementById("email").value.trim();
+            let nameError = document.getElementById("nameError");
+            let emailError = document.getElementById("emailError");
+
+            
+            nameError.textContent = "";
+            emailError.textContent = "";
+
+            try {
+                if (name === "") throw new Error("Name is required.");
+                if (email === "") throw new Error("Email is required.");
+                if (!email.match(/^[^\s@]+@[^\s@]+\.[^\s@]+$/)) throw new Error("Invalid email format.");
+
+                alert("Registration successful!");
+            } catch (error) {
+                if (error.message.includes("Name")) {
+                    nameError.textContent = error.message;
+                } else if (error.message.includes("Email")) {
+                    emailError.textContent = error.message;
+                }
+            }
+        });
+    </script>
+</body>
+</html>

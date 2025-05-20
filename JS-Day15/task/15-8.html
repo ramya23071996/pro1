@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Console Debugging</title>
+</head>
+<body>
+    <script>
+        function validateInput(input) {
+            if (!input) {
+                console.warn("Input is empty! Provide a valid value.");
+            } else if (input.length < 3) {
+                console.error("Error: Input is too short!");
+            } else {
+                console.log("Input is valid.");
+            }
+        }
+
+        validateInput("");  
+        validateInput("Hi"); 
+        validateInput("Hello"); 
+    </script>
+</body>
+</html>

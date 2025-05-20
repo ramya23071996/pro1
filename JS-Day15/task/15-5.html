@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Type Checking in JavaScript</title>
+    <style>
+        #result {
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Number Validation</h1>
+    <input type="text" id="inputValue" placeholder="Enter a number">
+    <button onclick="validateInput()">Check Input</button>
+    <p id="result"></p>
+
+    <script>
+        function checkNumber(value) {
+            if (typeof value !== 'number' || isNaN(value)) {
+                throw new TypeError("Invalid input! Please enter a valid number.");
+            }
+            return value;
+        }
+
+        function validateInput() {
+            const userInput = document.getElementById('inputValue').value;
+            const resultContainer = document.getElementById('result');
+            
+            try {
+                const number = checkNumber(Number(userInput));
+                resultContainer.textContent = `Valid Number: ${number}`;
+                resultContainer.style.color = "green";
+            } catch (error) {
+                resultContainer.textContent = error.message;
+                resultContainer.style.color = "red";
+                console.error("Error:", error);
+            }
+        }
+    </script>
+</body>
+</html>

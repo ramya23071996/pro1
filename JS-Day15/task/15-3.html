@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Divide by 0</title>
+</head>
+<body>
+    <input type="number" id="num1">
+<input type="number" id="num2">
+<button onclick="calculate()">Divide</button>
+<p id="result"></p>
+
+<script>
+function calculate() { 
+try {
+let num1 = parseFloat(document.getElementById("num1").value); 
+let num2 = parseFloat(document.getElementById("num2").value);
+if (isNaN(num1) || isNaN(num2)) {
+throw new Error("Invalid number input!");
+}
+if (num2 === 0) {
+throw new Error("Cannot divide by zero!");
+}
+document.getElementById("result").innerText = `Result: ${num1 / num2}`;
+} catch (error) {
+document.getElementById("result").innerText = `Error: ${error.message}`;
+}
+}
+</script>
+
+</body>
+</html>

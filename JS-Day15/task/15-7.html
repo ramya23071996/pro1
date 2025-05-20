@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Console Table Example</title>
+</head>
+<body>
+    <!-- <h1>Open the Console to See the Table</h1>
+    <button onclick="displayData()">Show Data</button> -->
+
+    <script>
+        const users = [
+            { id: 1, name: "Alice", age: 25, city: "New York" },
+            { id: 2, name: "Bob", age: 30, city: "London" },
+            { id: 3, name: "Charlie", age: 28, city: "Sydney" }
+        ];
+
+        function displayData() {
+            console.table(users);
+        }
+        displayData()
+    </script>
+</body>
+</html>

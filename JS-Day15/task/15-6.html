@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nested Try...Catch Example</title>
+    <style>
+        #result {
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Handle Multiple Errors with Nested Try...Catch</h1>
+    <input type="text" id="inputValue" placeholder="Enter a number">
+    <button onclick="processInput()">Validate</button>
+    <p id="result"></p>
+
+    <script>
+        function validateNumber(value) {
+            if (isNaN(value)) {
+                throw new TypeError("Invalid input! Please enter a number.");
+            }
+            if (value < 0) {
+                throw new RangeError("Number cannot be negative.");
+            }
+            return value;
+        }
+
+        function processInput() {
+            const userInput = document.getElementById('inputValue').value;
+            const resultContainer = document.getElementById('result');
+            
+            try {
+                try {
+                    const number = validateNumber(Number(userInput));
+                    resultContainer.textContent = `Valid Number: ${number}`;
+                    resultContainer.style.color = "green";
+                } catch (innerError) {
+                    if (innerError instanceof TypeError) {
+                        resultContainer.textContent = `Type Error: ${innerError.message}`;
+                    } else if (innerError instanceof RangeError) {
+                        resultContainer.textContent = `Range Error: ${innerError.message}`;
+                    } else {
+                        throw innerError; // If unexpected error, pass it to outer try block
+                    }
+                }
+            } catch (outerError) {
+                console.error("Unhandled Error:", outerError);
+                resultContainer.textContent = "An unexpected error occurred!";
+            }
+        }
+    </script>
+</body>
+</html>
