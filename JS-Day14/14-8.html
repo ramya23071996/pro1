@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Comments</title>
+    <style>
+        #comments {
+            margin-top: 20px;
+        }
+        .comment {
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+    <h1>Comments</h1>
+    <div id="comments"></div>
+    <button onclick="loadComments()">Load Comments</button>
+
+    <script>
+        function loadComments() {
+            const xhr = new XMLHttpRequest();
+            xhr.open('GET', 'https://jsonplaceholder.typicode.com/comments?_limit=5', true);
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    const comments = JSON.parse(xhr.responseText);
+                    const commentsContainer = document.getElementById('comments');
+                    commentsContainer.innerHTML = ''; // Clear existing comments
+                    
+                    comments.forEach(comment => {
+                        const div = document.createElement('div');
+                        div.className = 'comment';
+                        div.innerHTML = `<strong>${comment.name}</strong>: ${comment.body}`;
+                        commentsContainer.appendChild(div);
+                    });
+                }
+            };
+            xhr.send();
+        }
+    </script>
+</body>
+</html>

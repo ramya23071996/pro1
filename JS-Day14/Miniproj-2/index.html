@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real-Time Air Quality Checker</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        #result { font-size: 18px; margin-top: 20px; }
+    </style>
+</head>
+<body>
+    <h1>Real-Time Air Quality Checker</h1>
+    <label for="city">Select a city:</label>
+    <select id="city">
+        <option value="Delhi">Delhi</option>
+        <option value="Mumbai">Mumbai</option>
+        <option value="Bangalore">Bangalore</option>
+    </select>
+    <button onclick="fetchAirQuality()">Check Air Quality</button>
+    <div id="result"></div>
+
+    <script>
+        async function fetchAirQuality() {
+            const city = document.getElementById('city').value;
+            const apiKey = 'YOUR_API_KEY'; // Replace with a valid API key
+            const url = `https://api.waqi.info/feed/${city}/?token=${apiKey}`;
+            
+            try {
+                const response = await fetch(url);
+                const data = await response.json();
+
+                if (data.status !== "ok") {
+                    throw new Error("Invalid city or API error.");
+                }
+
+                const aqi = data.data.aqi;
+                const pollutants = data.data.iaqi;
+                let healthAdvice = getHealthAdvice(aqi);
+
+                document.getElementById('result').innerHTML = `
+                    <p><strong>AQI in ${city}:</strong> ${aqi}</p>
+                    <p><strong>Pollutants:</strong> PM2.5: ${pollutants.pm25?.v || "N/A"}, PM10: ${pollutants.pm10?.v || "N/A"}, NO2: ${pollutants.no2?.v || "N/A"}</p>
+                    <p><strong>Health Advice:</strong> ${healthAdvice}</p>
+                `;
+            } catch (error) {
+                document.getElementById('result').textContent = `Error fetching data: ${error.message}`;
+                console.error("Error fetching air quality:", error);
+            }
+        }
+
+        function getHealthAdvice(aqi) {
+            if (aqi <= 50) return "Good air quality. Enjoy outdoor activities!";
+            if (aqi <= 100) return "Moderate air quality. Sensitive groups should take precautions.";
+            if (aqi <= 150) return "Unhealthy for sensitive groups. Limit outdoor exposure.";
+            if (aqi <= 200) return "Unhealthy air quality. Consider wearing a mask outside.";
+            if (aqi <= 300) return "Very unhealthy air. Everyone should limit outdoor exposure.";
+            return "Hazardous air quality! Stay indoors and use air purifiers.";
+        }
+    </script>
+</body>
+</html>
