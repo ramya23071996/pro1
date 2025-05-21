@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness Website</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Battambang:wght@100;300;400;700;900&family=Dancing+Script:wght@400..700&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            font-family: "Nunito Sans", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: normal;
+            font-style: normal;
+            font-variation-settings:
+                "wdth" 100,
+                "YTLC" 500;
+        }
+        .google{
+           margin: 50px;
+        }
+       
+        .google_head{
+            display: flex;
+            font-size: 30px;
+            text-align: center;
+            margin-left: 570px;
+        }
+        .google_cont{
+            
+        }
+        .google_inp{
+            width: 300px;
+            height: 50px;
+            /* border-radius: 10px; */
+            margin-top: 30px;
+        }
+        .google_inp_legend{
+            /* padding-right: 100px; */
+            color: rgb(47, 47, 212);
+        }
+        .google_cont1{
+            margin-left: 450px;
+        }
+        .google_robot{
+            width: 250px;
+            height: 50px;
+            border: 1px solid black;
+            margin-top: 50px;
+            margin-left: 50px;
+            text-align: center;
+        }
+        .google_robot_box{
+            width: 20px;
+            height: 20px;
+            border: 1px solid black;
+            margin-top: 10px;
+            margin-left: 20px;
+        }
+        .google_robot{
+            display: flex;
+            justify-content: space-around;
+        }
+        .google_next{
+            color: white;
+            text-decoration: none;
+            background-color: blue;
+            width: 80px;
+            height: 25px;
+            text-align: center;
+            margin-left: 50px;
+            border-radius: 10px;
+            display: inline-block;
+            padding-top: 5px;
+        }
+         @media (min-width:320px)and (max-width:650px){
+            .google,.google_head,  .google_cont1,  .google_robot{
+           margin: 0px;
+        }
+        .google_inp{
+            width: 200px;
+        }
+         }
+          @media (min-width:651px)and (max-width:900px){
+            .google_head{
+                margin-left: 200px;
+            }
+            .google_cont1{
+                margin-left: 250px;
+            }
+          }
+    </style>
+</head>
+
+<body>
+    <div class="google">
+        <a href="join.html"><img src="image/icons8-back-arrow-50.png" alt=""></a>
+        <div class="google_cont">
+             <div class="google_head">
+            <p style="color: blue;">G</p>
+            <p style="color: red;">o</p>
+            <p style="color: yellow;">o</p>
+            <p style="color: blue;">g</p>
+            <p style="color: rgb(146, 219, 36);">l</p>
+            <p style="color: red;">e</p>
+        </div>
+        <div class="google_cont1">
+             <h2>Sign In</h2>
+        <fieldset class="google_inp">
+            <legend class="google_inp_legend">Email or Phone</legend>
+           <label for="">matias554@gmail.com</label>
+        </fieldset>
+        <fieldset class="google_inp">
+            <legend class="google_inp_legend">Password</legend>
+           <label for="password" >●●●●●●●●●</label>
+        </fieldset>
+         <input type="checkbox">Show Password <br>
+
+            <div class="google_robot">
+                <div class="google_robot_box"></div>
+                <p>i am not a robot</p>
+                <img src="image/icons8-google-recaptcha-64 (1).png" alt="">
+            </div>
+            <p style="display: inline-block;">Forgot Password ?</p>
+            <a href="index.html" class="google_next"> Next</a>
+        </div>
+       
+       
+
+        
+        </div>
+       
+
+
+    </div>
+</body>
+
+</html>
