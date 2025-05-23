@@ -1,0 +1,193 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+   font-family: "Roboto Condensed", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style:normal;
+  
+  background:  linear-gradient(to right, rgb(219, 82, 219), #5d8bd4); ;
+
+}
+
+.container{
+   display: flex;
+   justify-content: space-around;
+   /* margin-left: 400px;    */
+}
+.container>li,a{
+    text-decoration: none;
+    color: black;
+    font-weight: bolder;
+    font-size: 20px;
+    margin-top: 20px;
+    list-style: none;
+    /* justify-content: end; */
+    margin-left: 60px;
+}
+.container>a:hover{
+    background-color: white;
+    border-radius: 10px;
+    font-size: 25px;
+
+}
+.nav_bar>h1{
+    margin-top: 15px;
+}
+.nav_bar{
+    display: flex;
+    justify-content: space-around;
+}
+.home-body{
+    margin-left: 300px;
+    margin-top: 50px;
+    display: flex;
+    border: 3px solid;
+    width: 60%;
+    border-radius: 30px;
+    padding: 30px;
+}
+.home_Img{
+    
+    
+    margin-left: 100px;
+}
+.home_Img img{
+    margin-top: 50px;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 1px solid black;
+}
+.home_cont>h1{
+    font-size: 40px;
+    /* color: white; */
+}
+.home_cont>p{
+    line-height: 25px;
+    word-spacing: 5px;
+}
+.resume{
+    border-radius: 10px;
+    /* color: white; */
+    border: 2px solid white;
+}
+.resume:hover{
+    font-size: 25px;
+    color: white;
+}
+.skill{
+    margin-left: 450px;
+    margin-top: 50px;
+    display: flex;
+    border: 3px solid;
+    width: 40%;
+    border-radius: 30px;
+    padding: 30px;
+}
+.skill>h1{
+    margin-left: 20px;
+}
+.skill_box{
+     margin-left: 20px;
+    margin-top: 50px;
+    display: flex;
+    border: 3px solid;
+    width: 80%;
+    border-radius: 30px;
+    padding: 30px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.skill1{
+    border: 1px solid black;
+    margin: 5px;
+    padding: 5px;
+    border-radius: 10px;
+    color: white;
+    display: flex;
+}
+.skill1>p{
+    padding-top: 10px;
+}
+.skill1 img{
+    width: 30%;
+}
+.project{
+    margin: 50px;
+    padding: 5px;
+    display: flex;
+    justify-content: space-around;
+}
+.project_box{
+    border: 3px solid black;
+    width: 28%;
+    height: 450px;
+    border-radius: 10px;
+    background-color: rgb(218, 212, 212);
+
+}
+.box_image{
+    height: 50%;
+}
+.box_image img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+.box_image img:hover{
+    transform: scale(1.1);
+}
+.box_cont{
+    margin-top: 20px;
+    word-spacing: 10px;
+    line-height: 20px;
+}
+.button{
+    display: flex;
+}
+.btn{
+    /* margin-left: 30px; */
+    padding: 5px;
+    margin-top: 20px;
+    width: 100px;
+    height: 30px;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 10px;
+    background-color: rgb(84, 224, 49);
+}
+.btn:hover{
+    font-size: 17px;
+    background-color: rgb(5, 63, 5);
+    color: white;
+    cursor: pointer;
+}
+.education{
+    margin-left: 300px;
+}
+.edu-sec{
+    line-height: 25px;
+    padding: 5px;
+    width: 500px;
+    height: 200px;
+    border: 3px solid black;
+    border-radius: 20px;
+    margin-top: 20px;
+}
+.personal{
+    margin-top: 50px;
+    margin-left: 300px;
+    line-height: 50px;
+    width: 600px;
+    border: 3px solid black;
+    border-radius: 20px;
+    padding: 10px;
+    font-size: 20px;
+}
+.personal>h1{
+    text-align: center;
+}
