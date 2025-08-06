@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+
+{% block title %}Enroll | Bakery Accelerator{% endblock %}
+
+
+{% block content %}
+<div class="enroll-wrapper">
+    <div class="enroll-header">ENOROLL</div>
+
+    <p class="text-center mb-3 fw-bold">BAKERY BUSINESS ACCELERATOR PROGRAM</p>
+
+    <form method="POST" action="{{ url_for('enroll') }}">
+        <label for="name">NAME</label>
+        <input type="text" class="form-control" id="name" name="name" required>
+
+        <label for="email">E MAIL</label>
+        <input type="email" class="form-control" id="email" name="email" required>
+        <span class="right-text">ALREADY HAVE AN ACCOUNT</span>
+
+        <label for="mobile">MOBILE NUMBER</label>
+        <input type="tel" class="form-control" id="mobile" name="mobile" required>
+
+        <div class="form-check mt-2 mb-3">
+            <input class="form-check-input" type="checkbox" id="gst" name="gst">
+            <label class="form-check-label" for="gst">
+                USE GSTIN For Claiming Input Tax (India)
+            </label>
+        </div>
+
+        <div class="amount-box d-flex justify-content-between">
+            <span>SUB TOTAL:</span>
+            <span>INR 36000</span>
+        </div>
+        <div class="amount-box d-flex justify-content-between">
+            <span>DISCOUNT:</span>
+            <span>INR 0.00</span>
+        </div>
+        <div class="amount-box d-flex justify-content-between">
+            <span><strong>TOTAL PAYABLE:</strong><br><span class="small-note">(Incl. 18% GST)</span></span>
+            <strong>INR 36000.00</strong>
+        </div>
+
+        <div class="coupon-section">
+            <input type="text" class="form-control" placeholder="COUPON CODE" name="coupon">
+            <button class="btn btn-outline-secondary">APPLY COUPON</button>
+        </div>
+
+        <p class="fw-bold mb-1">UPI USE PAYMENT</p>
+        <input type="text" class="form-control mb-3" placeholder="+ UPI ID" name="upi">
+
+        <p class="fw-bold mb-1">CREDIT/DEBIT CARD USE PAY</p>
+        <input type="text" class="form-control mb-3" placeholder="+ CARD NUMBER" name="card">
+<div class="button">
+        <button type="submit" class="pay-submit">SUBMIT & PAY NOW</button>
+    </div>
+      </form>
+</div>
+{% endblock %}

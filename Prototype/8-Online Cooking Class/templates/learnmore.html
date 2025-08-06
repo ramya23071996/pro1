@@ -1,0 +1,257 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<section class="lmcooking-course-section">
+  <div class="lmoffer-container">
+    <h2>
+      From Butter Chicken to Singaporean Noodles: <br />
+      <strong>Cook India’s Favourite Dishes at Home</strong>
+    </h2>
+
+    <p class="lmdescription">
+      In just 90 days, master the art of cooking 140+ basic to advanced Restaurant and Home styled dishes with step by step guidance and recipes!
+    </p>
+
+    <h3 class="lmlimited-offer">Limited Period Offer – Get 67% OFF</h3>
+
+    <p class="lmprice">
+      <span class="lmoriginal">₹ 6000</span>
+      <span class="lmdiscounted">₹ 1,999</span>
+    </p>
+
+    <a href="{{ url_for('enroll') }}" class="lmenroll-button">ENROLL NOW</a>
+
+    <p class="lmfooter-note">
+      Learn the secrets of cooking delicious restaurant and home-style dishes with the Masterchef & ace the art of recreating amazing cuisines at home.
+    </p>
+
+    <!-- Info badges -->
+    <div class="lmbadge-row">
+      <div class="lmbadge">
+        <img src="ICON1_URL" alt="20M Followers Icon" />
+        <span>20M <br /><small>Followers</small></span>
+      </div>
+      <div class="lmbadge">
+        <img src="ICON2_URL" alt="Author Icon" />
+        <span>Author <br /><small>50+ books</small></span>
+      </div>
+      <div class="lmbadge">
+        <img src="ICON3_URL" alt="Expertise Icon" />
+        <span>30 Yrs+ <br /><small>culinary Expertise</small></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="course-curriculum-section py-5">
+  <div class="cccontainer">
+    <h2 class="text-center fw-bold mb-4">Course Curriculum</h2>
+
+    <div class="curriculum-box d-flex flex-wrap rounded-4 overflow-hidden">
+      <div class="curriculum-content p-4">
+        <ul class="list-unstyled curriculum-list">
+          <li>• Introduction : Restaurant style dishes</li>
+          <li>• Master class with master chef</li>
+          <li>• Restaurant style dishes: Accompaniments</li>
+          <li>• Breads</li>
+          <li>• Desserts</li>
+          <li>• Main course – non veg</li>
+          <li>• Main course – veg</li>
+          <li>• Rice</li>
+          <li>• Soup – veg</li>
+          <li>• Starters non – veg</li>
+          <li>• Soup non – veg</li>
+          <li>• Starters veg</li>
+          <li>• Bonus course: All about US Assessments</li>
+          <li>• Thank you</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="recipe-section py-5">
+  <div class="container">
+    <!-- Image with Play Button -->
+    <div class="video-wrapper position-relative rounded-4 overflow-hidden mb-4">
+      <img src="{{ url_for('static', filename='images/video.png') }}" alt="Veg Hakka Noodles" class="img-fluid w-100">
+      <span class="play-button position-absolute top-50 start-50 translate-middle">
+        ▶
+      </span>
+    </div>
+
+    <!-- Recipe Content -->
+    <div class="recipe-content px-2 px-md-4">
+      <h3 class="fw-bold">Veg Hakka Noodles (Indian-Chinese)</h3>
+
+      <p class="fw-bold mt-3 mb-2">Ingredients:</p>
+      <ul>
+        <li>200g Hakka Noodles</li>
+        <li>2 Tbsp Oil</li>
+        <li>1 Tbsp Soy Sauce</li>
+        <li>1 Tsp Vinegar</li>
+        <li>½ Tsp Chili Sauce</li>
+        <li>1 Tsp Garlic (Finely Chopped)</li>
+        <li>1 Onion (Sliced)</li>
+        <li>1 Cup Julienned Veggies (Carrot, Bell Pepper, Cabbage, Beans)</li>
+        <li>Salt & Pepper</li>
+      </ul>
+
+      <p class="fw-bold mt-4 mb-2">Instructions:</p>
+      <ol>
+        <li>Boil Noodles, Rinse With Cold Water, Toss In A Bit Of Oil.</li>
+        <li>Heat Oil In A Wok, Sauté Garlic And Onions.</li>
+        <li>Add All Veggies And Stir-Fry On High Heat For 2–3 Mins.</li>
+        <li>Add Noodles, Soy Sauce, Vinegar, Chili Sauce, Salt & Pepper.</li>
+        <li>Toss On High Flame Until Well Combined. Serve Hot.</li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<section class="testimonial-section py-5">
+  <div class="container text-center">
+    <h2 class="fw-bold mb-4">COURSE TESTIMONIALS</h2>
+
+    <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000">
+      <div class="carousel-inner">
+
+        <!-- Slide 1 -->
+        <div class="carousel-item active">
+          <div class="testimonial-card mx-auto p-4">
+            <img src="{{ url_for('static', filename='images/test3.png') }}" class="testimonial-img mx-auto mb-3" alt="Natalie R">
+            <blockquote class="fw-bold fs-5 m-4">
+              "THE CLASS WAS EASY TO FOLLOW AND THE FOOD TURNED OUT AMAZING!"
+            </blockquote>
+            <p class="fw-bold mb-0">– NATALIE R</p>
+          </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="carousel-item">
+          <div class="testimonial-card mx-auto p-4">
+            <img src="{{ url_for('static', filename='images/test4.png') }}" class="testimonial-img mx-auto mb-3" alt="Alex P">
+            <blockquote class="fw-bold fs-5 m-4">
+              "I LEARNED SO MUCH IN JUST A FEW DAYS. TOTALLY WORTH IT!"
+            </blockquote>
+            <p class="fw-bold mb-0">– ALEX P</p>
+          </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="carousel-item">
+          <div class="testimonial-card mx-auto p-4">
+            <img src="{{ url_for('static', filename='images/test1.png') }}" class="testimonial-img mx-auto mb-3" alt="Priya M">
+            <blockquote class="fw-bold fs-5 m-4">
+              "THE RECIPES WERE DELICIOUS AND EASY TO MAKE!"
+            </blockquote>
+            <p class="fw-bold mb-0">– PRIYA M</p>
+          </div>
+        </div>
+
+        <!-- Slide 4 -->
+        <div class="carousel-item">
+          <div class="testimonial-card mx-auto p-4">
+            <img src="{{ url_for('static', filename='images/test3.png') }}" class="testimonial-img mx-auto mb-3" alt="Jake T">
+            <blockquote class="fw-bold fs-5 m-4">
+              "I CAN COOK FOR MY FAMILY NOW. THANK YOU!"
+            </blockquote>
+            <p class="fw-bold mb-0">– JAKE T</p>
+          </div>
+        </div>
+
+        <!-- Slide 5 -->
+        <div class="carousel-item">
+          <div class="testimonial-card mx-auto p-4">
+            <img src="{{ url_for('static', filename='images/test2.png') }}" class="testimonial-img mx-auto mb-3" alt="Sarah L">
+            <blockquote class="fw-bold fs-5 m-4">
+              "WONDERFUL EXPERIENCE WITH SIMPLE EXPLANATIONS!"
+            </blockquote>
+            <p class="fw-bold mb-0">– SARAH L</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="features-section">
+    <div class="container">
+        <div class="row text-center">
+
+            <!-- Feature 1 -->
+            <div class="col-12 col-md-4 feature-box">
+                <i class="bi bi-card-checklist feature-icon"></i>
+                <div class="feature-text">
+                    1 YEAR ACCESS TO EXCLUSIVE<br>
+                    RECIPE VEDIOS, NOT<br>
+                    AVAILABLE ON YOUTUBE
+                </div>
+            </div>
+
+            <!-- Feature 2 -->
+            <div class="col-12 col-md-4 feature-box">
+                <i class="bi bi-bullseye feature-icon"></i>
+                <div class="feature-text">
+                    MORE THAN 140<br>
+                    DOWNLOADABLE SIGNATURE<br>
+                    RECIPES FROM THE MASTER CHEF
+                </div>
+            </div>
+
+            <!-- Feature 3 -->
+            <div class="col-12 col-md-4 feature-box">
+                <i class="bi bi-egg-fried feature-icon"></i>
+                <div class="feature-text">
+                    LEARN HOW TO COOK<br>
+                    DISHES FROM BASIC TO<br>
+                    ADVANCED RECIPES
+                </div>
+            </div>
+
+            <!-- Feature 4 -->
+            <div class="col-12 col-md-4 feature-box">
+                <i class="bi bi-list-task feature-icon"></i>
+                <div class="feature-text">
+                    WATCH VEDIO UNLIMITED<br>
+                    TIMES AND DOWNLOAD<br>
+                    RECIPES PDFS
+                </div>
+            </div>
+
+            <!-- Feature 5 -->
+            <div class="col-12 col-md-4 feature-box">
+                <i class="bi bi-tablet feature-icon"></i>
+                <div class="feature-text">
+                    LEARN FROM ANYWHERE WITH<br>
+                    ANY DEVICE - MOBILE,<br>
+                    DESKTOP, OR LAPTOP
+                </div>
+            </div>
+
+            <!-- Feature 6 -->
+            <div class="col-12 col-md-4 feature-box">
+                <i class="bi bi-list-ul feature-icon"></i>
+                <div class="feature-text">
+                    COURSE COMPLETION<br>
+                    CERTIFICATE
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<section class="py-5 bg-white text-center">
+    <div class="container">
+        <p class=" h3 fw-medium">
+            Homemakers to busy executives, budding chefs to food entrepreneurs, grandparents to moms, health-conscious
+            people or foodies – there's a course for all.
+        </p>
+        <a href="{{ url_for('courses') }}" class="btn btn-danger btn-lg mt-2 px-3 py-2 rounded-pill">
+          VIEW COURSES
+        </a>
+    </div>
+</section>
+{% endblock %}

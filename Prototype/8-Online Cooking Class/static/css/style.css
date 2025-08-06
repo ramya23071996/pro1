@@ -1,0 +1,1179 @@
+* {
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    margin: 0;
+    background: #fff;
+}
+
+/* Container & layout */
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 50px;
+    background-color: #FFF5EA;
+    /* cream background */
+    font-family: 'Arial', sans-serif;
+    font-weight: 600;
+}
+
+
+.logo-img {
+    padding-right: 70px;
+    border-radius: 15;
+    width: 200px;
+    height: 150px;
+    object-fit: contain;
+}
+
+/* Nav menu */
+.nav-menu {
+    flex-grow: 1;
+}
+
+.nav-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 60px;
+}
+
+.nav-list a:hover {
+    color: #A7C957;
+}
+
+.nav-list>li {
+    position: relative;
+}
+
+.nav-list a {
+    color: #6f665c;
+    /* taupe brown */
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: 550;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+/* Dropdown arrow */
+.dropdown>a {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/* Dropdown menu */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 30px;
+    left: 0;
+    background: #FFF5EA;
+    border-radius: 6px;
+    box-shadow: 0 2px 10px rgb(0 0 0 / 0.1);
+    padding: 10px 15px;
+    min-width: 180px;
+    z-index: 10;
+}
+
+.dropdown-menu li {
+    margin-bottom: 8px;
+}
+
+.dropdown-menu li:last-child {
+    margin-bottom: 0;
+}
+
+.dropdown-menu a {
+    font-weight: normal;
+    font-size: 14px;
+    color: #6f665c;
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* Login button */
+.login-btn {
+    background-color: #b94f4f;
+    color: white;
+    padding: 10px 25px;
+    border-radius: 25px;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 25px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    user-select: none;
+    margin-right: 40px;
+}
+
+.login-btn:hover {
+    background-color: #D57A66;
+    color: #b94f4f;
+}
+
+.footer {
+    background-color: #D57A66;
+    /* reddish brown */
+    /* padding: 40px 50px; */
+    color: white;
+    border-radius: 20px 20px 0 0;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 20px;
+    gap: 30px;
+}
+
+.footer.footer-container.footer-logo img {
+    border-radius: 15;
+    width: 200px;
+    height: 150px;
+    object-fit: contain;
+    padding: 50px;
+}
+
+.footer-section {
+    flex: 1;
+}
+
+.footer-section.footer-section.footer-courses {
+    padding-right: 100px;
+}
+
+.footer-section h3 {
+    font-weight: 600;
+    font-size: 25px;
+    font-weight: 550;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    padding-bottom: 5px;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+    font-size: 18px;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+    line-height: 1.2;
+    text-wrap: nowrap;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.footer-section ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+    color: #f2c6b1;
+}
+
+.footer-contact ul li {
+    margin-bottom: 15px;
+    font-size: 18px;
+    font-weight: 400;
+    white-space: pre-line;
+    /* allow line breaks */
+}
+
+.footer-contact h4 {
+    margin-top: 30px;
+    font-weight: 550;
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.social-icons a img {
+    width: 25px;
+    transition: filter 0.3s ease;
+}
+
+.social-icons a:hover img {
+    transform: scale(1.1);
+}
+
+/* Responsive: stack on smaller screens */
+@media screen and (max-width: 900px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .footer-section {
+        width: 100%;
+        text-align: center;
+    }
+
+    .footer-contact ul li {
+        white-space: normal;
+    }
+}
+
+.login-page-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 20px;
+    background-color: #fffaf2;
+    min-height: 80vh;
+}
+
+.login-box {
+    background-color: #fff5ea;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+}
+
+.login-box h2 {
+    margin-bottom: 25px;
+    text-align: center;
+    color: #333;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+    color: #444;
+}
+
+.form-input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+.login-submit-btn {
+    width: 100%;
+    margin-top: 20px;
+    background-color: #c14848;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.login-submit-btn:hover {
+    background-color: #a83636;
+}
+
+.signup-text {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.signup-text a {
+    color: #c14848;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.signup-text a:hover {
+    text-decoration: underline;
+}
+
+.register-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    padding: 60px 20px;
+    background-color: #fffaf2;
+}
+
+.register-box {
+    background-color: #fff5ea;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 420px;
+}
+
+.register-box h2 {
+    margin-bottom: 25px;
+    text-align: center;
+    color: #333;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+    color: #444;
+}
+
+.form-input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+.register-submit-btn {
+    width: 100%;
+    background-color: #c14848;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.register-submit-btn:hover {
+    background-color: #a83636;
+}
+
+.login-link {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.login-link a {
+    color: #c14848;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.login-link a:hover {
+    text-decoration: underline;
+}
+
+/* Base styles for background image sections */
+.hero-section,
+.story-section,
+.values-section {
+    position: relative;
+    height: 800px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    width: 95%;
+    margin: 50px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Overlay for darkening background */
+.hero-section .overlay,
+.story-section .overlay,
+.values-section .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 90%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+/* Text content above the overlay */
+.hero-section .content,
+.story-section .content,
+.values-section .content {
+    position: relative;
+    z-index: 2;
+    padding: 20px;
+    max-width: 800px;
+}
+
+/* Section-specific background images */
+.hero-section {
+    background-image: url('../images/hero.png');
+
+}
+
+.story-section {
+    border-radius: 55px;
+    background-color: white;
+    background-image: url('../images/our-story.png');
+}
+
+.values-section {
+    border-radius: 55px;
+    background-color: white;
+    background-image: url('../images/our-values.png');
+}
+
+.hero-banner {
+    background: linear-gradient(to bottom, #cde69c, #ffffff);
+    /* Green to white */
+    border-radius: 24px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    max-height: 650px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.hero-content {
+    padding: 3rem 2rem;
+}
+
+.hero-heading {
+    font-weight: 800;
+    font-size: 20px;
+    color: #000;
+}
+
+.hero-subtext {
+    font-size: 18px;
+    color: #333;
+    font-weight: 500;
+}
+
+.hero-btn {
+    background-color: #bd4b4b;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 30px;
+    padding: 10px 30px;
+    font-size: 1rem;
+    border: none;
+    transition: background-color 0.3s ease;
+    text-transform: uppercase;
+}
+
+.hero-btn:hover {
+    background-color: #a73838;
+}
+
+
+.offer-section img {
+    border-radius: 20px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    object-fit: cover;
+    height: 550px;
+    padding: 30px;
+}
+
+.banner-container {
+    position: relative;
+    max-width: 1200px;
+    margin: 40px auto;
+}
+
+.banner-container img {
+    width: 100%;
+    height: 700px;
+    border-radius: 10px;
+}
+
+.enroll-btn {
+    position: absolute;
+    bottom: 95px;
+    left: 33%;
+    transform: translateX(-50%);
+    background-color: #a83636;
+    color: #fff;
+    padding: 12px 24px;
+    border: none;
+    width: 250px;
+    border-radius: 6px;
+    font-size: 18px;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+}
+
+.enroll-btn:hover {
+    background-color: #f2c6b1;
+    color: #D57A66;
+}
+
+.info-section {
+    background-color: #d8f4b2;
+    padding: 40px 20px;
+    max-width: 800px;
+    margin: 30px auto;
+    border-radius: 10px;
+}
+
+.info-item {
+    margin-bottom: 20px;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.enroll-wrapper {
+    background-color: #fee8d2;
+    padding: 40px 20px;
+    max-width: 600px;
+    margin: 40px auto;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    font-family: 'Arial', sans-serif;
+}
+
+.enroll-header {
+    width: 200px;
+    background-color: #A7C957;
+    text-align: center;
+    padding: 8px;
+    margin-left: 175px;
+    border-radius: 20px;
+    font-weight: bold;
+    color: #222;
+    margin-bottom: 20px;
+}
+
+label {
+    font-weight: bold;
+    margin-top: 12px;
+    font-size: 0.9rem;
+}
+
+.form-control {
+    border-radius: 10px;
+    padding: 10px 15px;
+    margin-bottom: 12px;
+}
+
+.form-check-label {
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.amount-box {
+    background-color: white;
+    border: 1px solid #717070;
+    border-radius: 10px;
+    padding: 10px 15px;
+    margin-bottom: 10px;
+}
+
+.d-flex.justify-between {
+    justify-content: space-between;
+}
+
+.pay-submit {
+    background-color: #a83636;
+    color: white;
+    font-weight: bold;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 8px;
+    margin-top: 20px;
+    width: 40%;
+}
+
+.or-text {
+    font-weight: bold;
+    margin: 0 10px;
+    font-size: 0.85rem;
+}
+
+.coupon-section {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.payment-methods {
+    display: flex;
+    gap: 10px;
+}
+
+.payment-methods input {
+    flex: 1;
+}
+
+.small-note {
+    font-size: 0.7rem;
+    color: #555;
+}
+
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.right-text {
+    float: right;
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.features-section {
+    width: 90%;
+    background-color: #86a33c;
+    padding: 50px 20px;
+    color: white;
+    text-align: center;
+    margin: 60px;
+    border-radius: 30px;
+}
+
+.feature-box {
+    margin-bottom: 40px;
+}
+
+.feature-icon {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    display: block;
+}
+
+.feature-text {
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+@media (min-width: 768px) {
+    .feature-text {
+        font-size: 1.1rem;
+    }
+}
+
+.bg-custom-cream {
+    background-color: #fef6ec;
+}
+
+.ckcontainer {
+    background-image: url('/static/images/wood.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 20px;
+    padding: 50px 30px;
+    color: white;
+    height: 600px;
+}
+
+.ckbadge {
+    background-color: bisque;
+    height: 50px;
+    width: 180px;
+    text-wrap: wrap;
+    text-align: center;
+    font-size: 14px;
+    border: 1px solid brown;
+
+}
+
+.cloud-banner-section {
+    width: 90%;
+    margin: 50px;
+    text-align: center;
+}
+
+.support-container {
+    display: flex;
+    flex-direction: row;
+
+    gap: 30px;
+
+    height: 800px;
+    padding: 30px;
+    margin: 50px;
+}
+
+.form-section,
+.image-section {
+    width: 100%;
+    background-color: #fff4e1;
+}
+
+.contact-header {
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    padding-top: 20px;
+}
+
+.cooking-home {
+    display: flex;
+    background-color: #fef4ec;
+    padding: 40px;
+    border-radius: 20px;
+    overflow: hidden;
+    max-width: 1200px;
+    margin: auto;
+
+}
+
+.image-container {
+    flex: 1;
+    margin-right: 20px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.text-container {
+    flex: 1;
+    background: linear-gradient(to right, #c3df64, #c3df64);
+    border-radius: 20px;
+    padding: 40px 30px;
+    color: #000;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.text-container h1 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+.text-container p {
+    font-size: 16px;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+.view-courses-button {
+    background-color: #c84b4b;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 40px;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
+    width: fit-content;
+    margin: auto;
+}
+
+
+.featured-cards {
+    background-color: #fef4ec;
+    padding: 50px 50px;
+    text-align: center;
+    height: auto;
+
+}
+
+.featured-cards h2 {
+    font-size: 32px;
+    font-weight: 800;
+    margin-bottom: 40px;
+}
+
+.course-cards {
+    display: flex;
+    height: 600px;
+    gap: 30px;
+    margin-top: 60px;
+}
+
+.course-card {
+    background-image: url('/static/images/cards.png');
+    background-size: cover;
+    width: 100%;
+    height: 600px;
+    padding-top: 80px;
+    border-radius: 20px;
+    color: white;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+
+}
+
+.course-card h3 {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: whitesmoke;
+}
+
+.course-card p {
+    color: #000;
+    padding-left: 100px;
+    padding-top: 50px;
+    font-size: 18px;
+    width: 290px;
+    line-height: 1.2;
+    margin-bottom: 5px;
+}
+
+.price {
+    margin-top: 0;
+    padding-top: 0;
+    font-weight: bold;
+}
+
+.price strong {
+    font-size: 18px;
+    color: #fff;
+}
+
+.card-btn {
+    margin-left: 110px;
+    margin-bottom: 20px;
+    background-color: #c84b4b;
+    padding: 12px 25px;
+    width: 200px;
+    border-radius: 30px;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+
+.faq-section {
+    background-color: #fef6ef;
+    padding: 60px 20px;
+    font-family: 'Arial', sans-serif;
+    max-width: 900px;
+    margin: auto;
+}
+
+.faq-section h2 {
+    text-align: center;
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+
+.faq-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.faq-item {
+    border: 1px solid #8c7660;
+    border-radius: 18px;
+    background-color: #fff;
+    overflow: hidden;
+}
+
+.faq-question {
+    width: 100%;
+    text-align: left;
+    padding: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #5d4d41;
+    background: transparent;
+    border: none;
+    outline: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.faq-question .arrow {
+    transition: transform 0.3s ease;
+    font-size: 22px;
+}
+
+.faq-item.active .arrow {
+    transform: rotate(90deg);
+}
+
+.faq-answer {
+    padding: 20px;
+    display: none;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+}
+
+.faq-item.active .faq-answer {
+    display: block;
+}
+
+.lmcooking-course-section {
+    background-image: url('/static/images/learn.png');
+    background-repeat: no-repeat;
+    background-position: cover;
+    margin-left: 150px;
+    width: 90%;
+    height: 800px;
+    border-radius: 20px;
+    text-align: center;
+    color: #000;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 100px;
+}
+
+.lmoffer-container {
+    background-color: transparent;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 140px;
+    padding-left: 140px;
+    border-radius: 20px;
+}
+
+.lmoffer-container h2 {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.lmoffer-container p.description {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.4;
+    margin-bottom: 25px;
+}
+
+.lmlimited-offer {
+    font-size: 20px;
+    font-weight: 700;
+    margin: 20px 0 10px;
+}
+
+.lmprice {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.lmprice .lmoriginal {
+    text-decoration: line-through;
+    margin-right: 12px;
+    color: #555;
+}
+
+.lmprice .lmdiscounted {
+    color: #000;
+}
+
+.lmenroll-button {
+    display: inline-block;
+    margin: 20px 0;
+    padding: 12px 30px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #b44545;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.lmenroll-button:hover {
+    background-color: #9c3d3d;
+}
+
+.lmfooter-note {
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+/* Badge Row */
+.lmbadge-row {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    position: absolute;
+    bottom: 10px;
+    left: 200px;
+    flex-wrap: wrap;
+}
+
+.lmbadge {
+    background-color: #b44545;
+    color: white;
+    padding: 10px 16px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+}
+
+.lmbadge img {
+    width: 30px;
+    height: 30px;
+}
+
+.lmbadge span {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
+}
+
+.lmbadge small {
+    font-size: 12px;
+    color: #f5dcdc;
+}
+
+/* Responsive */
+@media screen and (max-width: 600px) {
+    .lmoffer-container h2 {
+        font-size: 22px;
+    }
+
+    .lmoffer-container p.description,
+    .lmfooter-note {
+        font-size: 16px;
+    }
+
+    .lmbadge {
+        font-size: 13px;
+        padding: 8px 12px;
+    }
+
+    .lmbadge img {
+        width: 26px;
+        height: 26px;
+    }
+}
+
+.course-curriculum-section {
+    background-color: white;
+}
+.cccontainer{width: 100%;}
+.curriculum-box {
+    background-image: url('/static/images/intro.png');
+    background-repeat: no-repeat;
+    background-position: cover;
+    height: auto;
+    margin-left: 120px;
+    height: 700px;
+    position: relative;
+}
+
+.curriculum-content {
+    background-color: transparent;
+    padding-top: 10px;
+    max-width: 50%;
+    color:black;
+    position: absolute;
+    left: 650px;
+    top: 0;
+}
+
+.curriculum-list li {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 8px;
+    line-height: 1.8;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+    .curriculum-content {
+        max-width: 100%;
+        padding: 2rem 1rem;
+    }
+
+    .curriculum-box {
+        flex-direction: column;
+    }
+}
+
+.video-wrapper {
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+}
+
+.play-button {
+  font-size: 48px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 12px 20px;
+  border-radius: 50%;
+  line-height: 1;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.play-button:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.recipe-content ul,
+.recipe-content ol {
+  padding-left: 20px;
+  margin-bottom: 0;
+}
+
+.recipe-content ul li,
+.recipe-content ol li {
+  margin-bottom: 8px;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.testimonial-card {
+  max-width: 650px;
+  background-color: #fff2dc;
+  border-radius: 20px;
+  position: relative;
+  padding-top: 60px;
+  margin-top: 60px;
+}
+
+.testimonial-img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #fff5ee;
+  position: absolute;
+  top: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: white;
+  z-index: 2;
+}

@@ -1,0 +1,93 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<!-- About Banner -->
+<div class="container py-5">
+  <div class="row align-items-center">
+    <!-- Left side: Text banner -->
+    <div class="col-md-6">
+      <div class="hero-banner p-4 rounded-4 shadow">
+        <h1 class="fw-bold display-6 fs-7">MORE POWER TO YOUR COOKING!<br>THROUGH LEARNING</h1>
+        <p class="fw-medium lead mt-4 fs-5">
+          Discover A Better Way Of Cooking Amazing Dishes <br>
+          With Recipes Specially Curated By The Most <br>
+          Celebrated Face In The Indian Cuisine.
+        </p>
+        <a href="{{ url_for('courses') }}" class="view-courses-button">
+          VIEW COURSES
+        </a>
+      </div>
+    </div>
+
+    <!-- Right side: Image -->
+    <div class="col-md-6 text-center">
+      <img src="{{ url_for('static', filename='images/hero.png') }}" alt="Cooking Banner" class="img-fluid rounded-4 shadow">
+    </div>
+  </div>
+</div>
+
+<!-- About Us -->
+<section class="py-5 text-center">
+    <div class="container">
+        <h4 class="fw-bold mb-3 h2">ABOUT US</h4>
+        <p class="lead fs-5 fw-medium">
+            Welcome to Flavour Theory, your go-to place for delicious recipes, culinary inspiration, and a community
+            of food lovers.
+            <br><br>
+           At Flavour theory, we believe that cooking is more than just preparing food—it’s about creativity, joy, and bringing people together. Whether you're a seasoned chef or just starting your culinary journey, our mission is to make cooking easy, fun, and accessible to everyone.
+        </p>
+    </div>
+</section>
+
+<!-- Our Story -->
+ <h5 class="fw-bold h2 text-center">OUR STORY</h5>
+<div class="story-section text-white text-center d-flex justify-content-center align-items-center">
+     <div class="overlay"></div>
+    <div class="content">
+        <p class="px-4 fs-5 fw-medium">Our journey began with a passion for food and the desire to share it with others. Flavour theory, a passionate home cook and food enthusiast, started the website to create a space where anyone, no matter their skill level, could discover new recipes, learn helpful cooking tips, and explore a world of flavors.
+
+Over the years, our team has grown, but our core values remain the same: to inspire home cooks everywhere to embrace the magic of the kitchen and make every meal a special occasion..</p>
+    </div>
+</div>
+
+<!-- What We Offer -->
+<section class="py-5">
+    <div class="container">
+        <h4 class="text-center fw-bold mb-4 h2">WHAT WE OFFER</h4>
+        <ul class="list-unstyled fs-5 lh-lg">
+            <li><span class="text-danger fw-bold">• Tasty Recipes:</span>From quick weeknight dinners to indulgent desserts, our recipes cover every occasion and dietary preference. Each recipe is tested and designed to be easy to follow, so you can enjoy the process as much as the result!.</li>
+            <li><span class="text-danger fw-bold">• Helpful Cooking Tips:</span> Our step-by-step guides, cooking hacks, and ingredient substitutions will help you master new techniques and cook with confidence.</li>
+            <li><span class="text-danger fw-bold">• Community of Food Lovers: </span> Join our vibrant community of home cooks, share your own recipes, leave reviews, and inspire others. We believe cooking is even more enjoyable when shared!</li>
+        </ul>
+    </div>
+</section>
+
+<!-- Gift Offer -->
+<div class="offer-section my-5">
+  <img src="{{ url_for('static', filename='images/offer.png') }}" alt="Limited Period Offer" class="img-fluid w-100 rounded shadow">
+</div>
+<!-- Our Values -->
+ <h5 class=" h2 fw-bold text-center">OUR VALUES</h5>
+<div class="values-section text-white text-center d-flex justify-content-center align-items-center">
+    <div class="overlay"></div>
+    <div class="content">
+        
+        <p class=" fs-5 fw-medium ">Simplicity: We keep our recipes simple and approachable, so even beginners can enjoy cooking.
+
+Creativity: We encourage experimenting in the...</p>
+    </div>
+</div>
+
+<section class="py-5 bg-white text-center">
+    <div class="container">
+        <p class=" h3 fw-medium">
+            Homemakers to busy executives, budding chefs to food entrepreneurs, grandparents to moms, health-conscious
+            people or foodies – there's a course for all.
+        </p>
+        <a href="{{ url_for('courses') }}" class="view-courses-button">
+          VIEW COURSES
+        </a>
+    </div>
+</section>
+
+{% endblock %}

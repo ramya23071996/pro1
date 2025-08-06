@@ -1,0 +1,131 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+
+<section class="featured-cards">
+  <h2>FEATURED COURSES</h2>
+  <div class="course-cards">
+    <!-- Card 1 -->
+    <div class="course-card">
+      <h3>THE GOOD GUT PROGRAM</h3>
+      <p>
+        In Just 4 Weeks, Say Goodbye To Bloating,
+        Constipation, Inflammation & Acidity.
+        Plus Gain More Energy & Boost Immunity
+      </p>
+      <p class="price">Get 70% OFF<br>₹ 4999 <strong>₹ 1499</strong></p>
+      <a href="{{ url_for('learnmore') }}"class="card-btn">LEARN MORE</a>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="course-card">
+      <h3>LOOK GOOD COURSE</h3>
+      <p>
+        In Just 30 Days, Discover<br>
+        Time Tested & Science Backed Insights,<br>
+        Remedies And Recipes
+      </p>
+      <p class="price">New Launch Offer |<br>Get 88% OFF<br>₹ 42,995 <strong>₹ 4,999</strong></p>
+      <a href="{{ url_for('learnmore') }}" class="card-btn">LEARN MORE</a>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="course-card">
+      <h3>Start Your Food Business From Home</h3>
+      <p>
+        Learn How To Start Your Food Business From Home,<br>
+        And Run A Successful Home
+      </p>
+      <p class="price">New Launch Offer | Get<br>70% OFF<br>₹ 4999 <strong>₹ 1,499</strong></p>
+      <a href="{{ url_for('learnmore') }}" class="card-btn">LEARN MORE</a>
+    </div>
+  </div>
+</section>
+
+<section class="featured-cards">
+  <h2>ALL COURSES</h2>
+  <div class="course-cards">
+    <!-- Card 1 -->
+    <div class="course-card">
+      <h3>IMMUNITY BOOSTER RECIPES</h3>
+            <p>
+       Live Well And Boost Your Immunity With Time-Tested
+       Immunity Booster Recipes From The Expert In Indian Cusine
+      </p>
+      <p class="price">Limited Period Offer-Get 40% OFF<br><del>₹ 4999</del> <strong>₹ 1999</strong></p>
+      <a href="{{ url_for('learnmore') }}" class="card-btn">LEARN MORE</a>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="course-card">
+      <h3>GARNISHING & PLATING COURSE</h3> 
+      <p>
+        Love PLating Your Dishes Like An Expert?
+        From MasterChef Sanjeev Kapoor To Excel In The Art Of Food Presentation!
+      </p>
+      <p class="price">Limited Period Offer |<br>Get 60% OFF<br><del>₹ 999</del> <strong>₹ 399</strong></p>
+      <a href="{{ url_for('learnmore') }}" class="card-btn">LEARN MORE</a>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="course-card">
+      <h3>COOKING AT HOME RESTAURENT STYLES & HOME STYLE</h3>   
+      <p>
+       Cook Amazing Restaurant Style Dishes and Change Everyday Hokme Cooke dDishes Into Exceptional DishesYour Family Will Love
+      </p>
+      <p class="price"> Get<br>90% OFF<br><del>₹ 6000</del> <strong>₹ 1,999</strong></p>
+      <a href="{{ url_for('learnmore') }}" class="card-btn">LEARN MORE</a>
+    </div>
+</div>
+<div class="course-cards">
+    <!-- Card 4 -->
+     <div class="course-card">
+      <h3>VEGETARIAN,S DELIGHT</h3>
+      <p>
+        Cook The Tastiest VEGETARIAN Dishes Using Everyday Ingredients For Your Loved Ones At Home A True Delight For A Vegetarian!
+      </p>
+      <p class="price"> Get<br>37% OFF<br><del>₹ 4000 </del><strong>₹ 2,499</strong></p>
+      <a href="{{ url_for('learnmore') }}" class="card-btn">LEARN MORE</a>
+    </div>
+
+    <!-- Card 5 -->
+     <div class="course-card">
+      <h3>BASIC COOKING FOR SINGLES</h3>
+<p>
+        Impress Friends And Save Money By Making Food On Your
+        Own Like The MasterChef. From How To Use A Cooker
+      </p>
+      <p class="price">Limited period Offer | Get<br>67% OFF<br><del>₹ 6000</del> <strong>₹ 1,999</strong></p>
+     <a href="{{ url_for('learnmore') }}" class="card-btn">LEARN MORE</a>
+    </div>
+
+    <!-- Card 6 -->
+     <div class="course-card" >
+      <h3>INDIA,S FAVORITES: RESTAURANTS AND HOME STYLE DISHES</h3>
+      <p>
+        Impress Friends And Save Money By Making Food On Your
+        Own Like The MasterChef. From How To Use A Cooker
+      </p>
+      <p class="price">Limited period Offer | Get<br>67% OFF<br><del>₹ 6000</del> <strong>₹ 1,999</strong></p>
+      <a href="{{ url_for('learnmore') }}" class="card-btn">LEARN MORE</a>
+    </div>
+  </div>
+</section>
+
+<div class="offer-section my-5">
+  <img src="{{ url_for('static', filename='images/offer.png') }}" alt="Limited Period Offer" class="img-fluid w-100 rounded shadow">
+</div>
+
+<section class="py-5 bg-white text-center">
+    <div class="container">
+        <p class=" h3 fw-medium">
+            Homemakers to busy executives, budding chefs to food entrepreneurs, grandparents to moms, health-conscious
+            people or foodies – there's a course for all.
+        </p>
+        <a href="{{ url_for('courses') }}" class="view-courses-button">
+          VIEW COURSES
+        </a>
+    </div>
+</section>
+{% endblock %}

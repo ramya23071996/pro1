@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Popup Courses</title>
+  <style>
+    body {
+      margin: 0;
+      background-color: #000;
+      font-family: "Poppins", sans-serif;
+    }
+
+    .popup {
+      background-color: #fff4e1;
+      width: 300px;
+      height: 500px;
+      margin: 150px auto;
+      padding: 20px;
+      border-radius: 8px;
+      line-height: 1.2;
+      color: #000;
+    }
+
+    .popup a {
+      display: block;
+      margin: 10px 0;
+      text-decoration: none;
+      color: #000;
+      font-weight: bold;
+      transition: color 0.2s;
+    }
+
+    .popup a:hover {
+      color: #ff6600;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="popup">
+    <a href="{{ url_for('learnmore') }}">THE GOOD GUT PROGRAM</a><br>
+    <a href="{{ url_for('learnmore') }}">FOOD LOOK GOOD</a><br>
+    <a href="{{ url_for('learnmore') }}">START YOUR BUSINESS FROM HOME - NON VEG & VEG</a><br>
+    <a href="{{ url_for('learnmore') }}">START YOUR FOOD BUSINESS FROM HOME - VEG ONLY</a><br>
+    <a href="{{ url_for('learnmore') }}">IMMUNITY BOOSTER RECIPES</a><br>
+    <a href="{{ url_for('learnmore') }}">INDIA’S FAVOURITES: RESTAURANTS AND HOME STYLE DISHES</a><br>
+    <a href="{{ url_for('learnmore') }}">VEGETARIAN’S DELIGHT</a><br>
+    <a href="{{ url_for('learnmore') }}">GARNISHING & PLATING</a><br>
+  </div>
+
+</body>
+</html>

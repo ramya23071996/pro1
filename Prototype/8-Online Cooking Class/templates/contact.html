@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+{% block title %}Academy Support{% endblock %}
+
+{% block content %}
+<div class="contact-header">ACADEMY SUPPORT</div>
+<div class=" support-container my-5">
+  <div class="row shadow-lg rounded form-section">
+    <!-- Form Section -->
+    <div >
+      <h5 class="fw-bold mb-5 text-center pt-3">SUBMIT A TICKET</h5>
+      <form action="/submit_ticket" method="POST">
+        <div class="mb-4">
+          <label class="form-label">REQUESTER*</label>
+          <input type="email" name="email" class="form-control shadow-sm" placeholder="EMAIL" required>
+        </div>
+        <div class="mb-4">
+          <label class="form-label">SUBJECT*</label>
+          <input type="text" name="subject" class="form-control shadow-sm" placeholder="SUBJECT" required>
+        </div>
+        <div class="mb-4">
+          <label class="form-label">DESCRIPTION*</label>
+          <textarea name="description" class="form-control shadow-sm" rows="4" placeholder="Describe your issue" required></textarea>
+        </div>
+        <div class="mb-4 text-success">
+          <a href="#">+ ATTACH A FILE</a>
+        </div>
+        <div class="mb-4">
+          <div class="p-2 bg-white rounded shadow-sm">I'M NOT A ROBOT</div>
+        </div>
+        <button type="submit" class="btn btn-danger me-2 m-3">SUBMIT</button>
+        <button type="reset" class="btn btn-outline-dark m-3">CANCEL</button>
+      </form>
+    </div>
+</div>
+    <!-- Image Section -->
+    <div class="col-md-6 d-none d-md-block p-0 image-section">
+      <img src="{{ url_for('static', filename='images/support.png') }}" alt="Support" class="img-fluid h-100 w-100" style="object-fit: cover;">
+    </div>
+  
+</div>
+
+
+<section class="py-5 bg-white text-center">
+    <div class="container">
+        <p class=" h3 fw-medium">
+            Homemakers to busy executives, budding chefs to food entrepreneurs, grandparents to moms, health-conscious
+            people or foodies – there's a course for all.
+        </p>
+        <a href="{{ url_for('courses') }}" class="view-courses-button">
+          VIEW COURSES
+        </a>
+    </div>
+</section>
+{% endblock %}

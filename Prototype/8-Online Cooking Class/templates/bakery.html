@@ -1,0 +1,93 @@
+{% extends 'base.html' %}
+
+{% block title %}Bakery Business Accelerator{% endblock %}
+
+
+{% block content %}
+<h2 class="text-center fw-bold pt-3">BAKERY BUSINESS ACCELERATOR PROGRAM </h2>
+<h2 class="text-center fw-bold">Program Limited to 50 people only! </h2>
+<!-- Banner Section -->
+<div class="banner-container">
+    <img src="{{ url_for('static', filename='images/bakery.png') }}" alt="Bakery Program Banner">
+    <a href="{{ url_for('enroll') }}" class="enroll-btn">ENROLL NOW</a>
+</div>
+
+<!-- Info Section -->
+<section class="features-section">
+    <div class="container">
+        <div class="row text-center">
+
+            <!-- Feature 1 -->
+            <div class="col-12 col-md-4 feature-box">
+                <i class="bi bi-card-checklist feature-icon"></i>
+                <div class="feature-text">
+                    1 YEAR ACCESS TO EXCLUSIVE<br>
+                    RECIPE VEDIOS, NOT<br>
+                    AVAILABLE ON YOUTUBE
+                </div>
+            </div>
+
+            <!-- Feature 2 -->
+            <div class="col-12 col-md-4 feature-box">
+                <i class="bi bi-bullseye feature-icon"></i>
+                <div class="feature-text">
+                    MORE THAN 140<br>
+                    DOWNLOADABLE SIGNATURE<br>
+                    RECIPES FROM THE MASTER CHEF
+                </div>
+            </div>
+
+            <!-- Feature 3 -->
+            <div class="col-12 col-md-4 feature-box">
+                <i class="bi bi-egg-fried feature-icon"></i>
+                <div class="feature-text">
+                    LEARN HOW TO COOK<br>
+                    DISHES FROM BASIC TO<br>
+                    ADVANCED RECIPES
+                </div>
+            </div>
+
+            <!-- Feature 4 -->
+            <div class="col-12 col-md-4 feature-box">
+                <i class="bi bi-list-task feature-icon"></i>
+                <div class="feature-text">
+                    WATCH VEDIO UNLIMITED<br>
+                    TIMES AND DOWNLOAD<br>
+                    RECIPES PDFS
+                </div>
+            </div>
+
+            <!-- Feature 5 -->
+            <div class="col-12 col-md-4 feature-box">
+                <i class="bi bi-tablet feature-icon"></i>
+                <div class="feature-text">
+                    LEARN FROM ANYWHERE WITH<br>
+                    ANY DEVICE - MOBILE,<br>
+                    DESKTOP, OR LAPTOP
+                </div>
+            </div>
+
+            <!-- Feature 6 -->
+            <div class="col-12 col-md-4 feature-box">
+                <i class="bi bi-list-ul feature-icon"></i>
+                <div class="feature-text">
+                    COURSE COMPLETION<br>
+                    CERTIFICATE
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<section class="py-5 bg-white text-center">
+    <div class="container">
+        <p class=" h3 fw-medium">
+            Homemakers to busy executives, budding chefs to food entrepreneurs, grandparents to moms, health-conscious
+            people or foodies – there's a course for all.
+        </p>
+        <a href="{{ url_for('courses') }}" class="btn btn-danger btn-lg mt-2 px-3 py-2 rounded-pill">
+          VIEW COURSES
+        </a>
+    </div>
+</section>
+{% endblock %}

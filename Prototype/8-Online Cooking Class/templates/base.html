@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Flavour Theory</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script src="{{ url_for('static', filename='js/script.js') }}" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="main-header">
+        <div class="logo-container">
+            <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Flavour Theory Logo" class="logo-img" />
+        </div>
+        <nav class="nav-menu">
+            <ul class="nav-list">
+                <li><a href="{{ url_for('home') }}">HOME</a></li>
+                <li><a href="{{ url_for('about') }}">ABOUT</a></li>
+                <li class="dropdown">
+                    <a href="#">PROGRAMS &#x25BE;</a> <!-- down arrow -->
+                    <ul class="dropdown-menu">
+                        <li><a href="{{ url_for('bakery') }}">Bakery Business</a></li>
+                        <li><a href="#">Accelerator Program</a></li>
+                        <li><a href="{{ url_for('cloudkitchen') }}">Cloud Kitchen</a></li>
+                        <li><a href="#">Accelerator Program</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="{{url_for('courses')}}">COURSES &#x25BE;</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">The Good Gut Program</a></li>
+                        <li><a href="#">Food Look Good</a></li>
+                        <li><a href="#">Vegetarian's Delight</a></li>
+                        <li><a href="#">Garnishing & Plating</a></li>
+                    </ul>
+                </li>
+                <li><a href="{{url_for('contact')}}">CONTACT</a></li>
+            </ul>
+        </nav>
+        {% if current_user.is_authenticated %}
+        <a href="{{url_for('logout')}}" class="login-btn">LOGOUT</a>
+        {% else %}
+        <a href="{{ url_for('login') }}" class="login-btn">LOGIN</a>
+        {% endif %}
+    </header>
+
+
+    <!-- Flash messages -->
+    {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+    <div class="flashes">
+        {% for category, message in messages %}
+        <div class="flash {{ category }}">{{ message }}</div>
+        {% endfor %}
+    </div>
+    {% endif %}
+    {% endwith %}
+
+    <!-- Content -->
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-logo">
+                <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Flavour Theory Logo">
+            </div>
+
+            <div class="footer-section footer-links">
+                <h3>HOME</h3>
+                <ul>
+                    <li><a href="{{ url_for('about') }}">About Us</a></li>
+                    <li><a href="{{ url_for('programs') }}">Programs</a></li>
+                    <li><a href="{{ url_for('popcourse') }}">Courses</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section footer-courses">
+                <h3>COURSES</h3>
+                <ul>
+                    <li>The Good Gut Program</li>
+                    <li>Food Look Good</li>
+                    <li>Start Your Business From Home - Non Veg & Veg</li>
+                    <li>Start Your Food Business From Home - Veg Only</li>
+                    <li>Immunity Booster Recipes</li>
+                    <li>India's Favourites: Restaurants and Home Style Dishes</li>
+                    <li>Vegetarian’s Delight</li>
+                    <li>Garnishing & Plating</li>
+                </ul>
+            </div>
+
+            <div class="footer-section footer-contact">
+                <h3>CONTACT</h3>
+                <ul>
+                    <li>📍 FLOVERTHEORY ACADEMY<br>1234, Olive Street,<br>Chennai-021</li>
+                    <li>✉ Info@Flovertheoryacademy.in</li>
+                    <li>📞 044-987 6785 5677</li>
+                </ul>
+
+                <h4>FOLLOW US</h4>
+                <div class="social-icons">
+                    <a href="#"><img src="{{ url_for('static', filename='images/instagram.png') }}" alt="Instagram"></a>
+                    <a href="#"><img src="{{ url_for('static', filename='images/google.jpg') }}" alt="Google"></a>
+                    <a href="#"><img src="{{ url_for('static', filename='images/facebook.png') }}" alt="Facebook"></a>
+                    <a href="#"><img src="{{ url_for('static', filename='images/youtube.png') }}" alt="YouTube"></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+</body>
+
+</html>
