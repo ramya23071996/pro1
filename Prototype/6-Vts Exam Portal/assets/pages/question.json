@@ -1,0 +1,57 @@
+[
+  {
+    "id": 1,
+    "question": "Which device is used to input text and numbers into a computer?",
+    "options": ["Monitor", "Mouse", "Keyboard", "Speaker"]
+  },
+  {
+    "id": 2,
+    "question": "Which application is commonly used to browse the internet?",
+    "options": ["Photoshop", "Excel", "Chrome", "PowerPoint"]
+  },
+  {
+    "id": 3,
+    "question": "Which file extension is used for a webpage?",
+    "options": [".txt", ".html", ".docx", ".xls"]
+  },
+  {
+    "id": 4,
+    "question": "What is the main function of a web browser?",
+    "options": ["To edit videos", "To create images", "To access websites", "To run games"]
+  },
+  {
+    "id": 5,
+    "question": "Which one is an example of an email provider?",
+    "options": ["Gmail", "Chrome", "YouTube", "Google Maps"]
+  },
+  {
+    "id": 6,
+    "question": "What is the purpose of a password?",
+    "options": ["To decorate the screen", "To make typing faster", "To protect user accounts", "To install software"]
+  },
+  {
+    "id": 7,
+    "question": "Which software is used for creating presentations?",
+    "options": ["Word", "Excel", "PowerPoint", "Paint"]
+  },
+  {
+    "id": 8,
+    "question": "Which of these is a search engine?",
+    "options": ["Yahoo", "Facebook", "Outlook", "Excel"]
+  },
+  {
+    "id": 9,
+    "question": "What does 'URL' stand for?",
+    "options": [
+      "Uniform Resource Locator",
+      "Universal Resource Link",
+      "Unified Result Link",
+      "User Request Location"
+    ]
+  },
+  {
+    "id": 10,
+    "question": "Which tag is used to insert an image in HTML?",
+    "options": ["<img>", "<image>", "<src>", "<pic>"]
+  }
+]
